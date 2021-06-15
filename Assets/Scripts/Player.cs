@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             FindObjectOfType<Flipable>().SetGravity(Direction.Up);
+            Physics.gravity = new Vector3(0, 9.81f);
         }
         // else if (Input.GetKeyDown(KeyCode.RightArrow))
         // {
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.S))
         {
             FindObjectOfType<Flipable>().SetGravity(Direction.Down);
+            Physics.gravity = new Vector3(0, -9.81f);
         }
 
         if (Input.GetKey(KeyCode.D))
