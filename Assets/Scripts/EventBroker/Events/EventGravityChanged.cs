@@ -1,10 +1,10 @@
 ﻿namespace EventBroker.Events
 {
-    public class EventDirectionChanged
+    public class EventGravityChanged
     {
         public Direction Direction;
     
-        public EventDirectionChanged(Direction direction)
+        public EventGravityChanged(Direction direction)
         {
             this.Direction = direction;
         }

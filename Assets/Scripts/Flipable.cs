@@ -8,11 +8,11 @@ public class Flipable : MonoBehaviour
     public Direction direction;
 
     private void Start() =>
-        MessageHandler.Instance().SubscribeMessage<EventDirectionChanged>(SetGravity);
+        MessageHandler.Instance().SubscribeMessage<EventGravityChanged>(SetGravity);
     
 
     private void OnDisable() =>
-        MessageHandler.Instance().UnsubscribeMessage<EventDirectionChanged>(SetGravity);
+        MessageHandler.Instance().UnsubscribeMessage<EventGravityChanged>(SetGravity);
     
 
     public Direction Direction
@@ -33,7 +33,7 @@ public class Flipable : MonoBehaviour
         }
     }
 
-    public void SetGravity(EventDirectionChanged e)
+    public void SetGravity(EventGravityChanged e)
     {
         Direction = e.Direction;
     }

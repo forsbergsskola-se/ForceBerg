@@ -29,9 +29,9 @@ public class Player : MonoBehaviour
     void CheckInput()
     {
         if (Input.GetKeyDown(KeyCode.W))
-            MessageHandler.Instance().SendMessage(new EventDirectionChanged(Direction.Up));
+            MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Up));
         else if (Input.GetKeyDown(KeyCode.S))
-            MessageHandler.Instance().SendMessage(new EventDirectionChanged(Direction.Down));
+            MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Down));
 
         if (Input.GetKey(KeyCode.D))
         {
