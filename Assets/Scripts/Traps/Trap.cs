@@ -1,3 +1,5 @@
+using EventBroker;
+using EventBroker.Events;
 using UnityEngine;
 
 namespace Traps
@@ -10,7 +12,7 @@ namespace Traps
             if (other.gameObject.TryGetComponent<Player>(out var player))
             {
                 Debug.Log("Player collided with Trap : " +this.name);
-                //On Player Death
+                MessageHandler.Instance().SendMessage(new EventPlayerDeath());
             }
         }
     }

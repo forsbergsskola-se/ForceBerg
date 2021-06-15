@@ -1,41 +1,37 @@
 using System;
+using EventBroker;
+using EventBroker.Events;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public float speed = 5;
     private Rigidbody2D rigidbody2D;
+    private bool playerHasControl = true;
 
     private void Start()
     {
         rigidbody2D = GetComponentInChildren<Rigidbody2D>();
+        MessageHandler.Instance().SubscribeMessage<EventPlayerDeath>(OnDeath);
     }
 
     private void Update()
     {
-        CheckInput();
+        if(playerHasControl)
+            CheckInput();
+    }
+
+    private void OnDisable()
+    {
+        MessageHandler.Instance().UnsubscribeMessage<EventPlayerDeath>(OnDeath);
     }
 
     void CheckInput()
     {
         if (Input.GetKeyDown(KeyCode.W))
-        {
-            FindObjectOfType<Flipable>().SetGravity(Direction.Up);
-            Physics.gravity = new Vector3(0, 9.81f);
-        }
-        // else if (Input.GetKeyDown(KeyCode.RightArrow))
-        // {
-        //     FindObjectOfType<Flipable>().SetGravity(Direction.Right);
-        // }
-        // else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        // {
-        //     FindObjectOfType<Flipable>().SetGravity(Direction.Left);
-        // }
+            MessageHandler.Instance().SendMessage(new EventDirectionChanged(Direction.Up));
         else if (Input.GetKeyDown(KeyCode.S))
-        {
-            FindObjectOfType<Flipable>().SetGravity(Direction.Down);
-            Physics.gravity = new Vector3(0, -9.81f);
-        }
+            MessageHandler.Instance().SendMessage(new EventDirectionChanged(Direction.Down));
 
         if (Input.GetKey(KeyCode.D))
         {
@@ -45,5 +41,11 @@ public class Player : MonoBehaviour
         {
             rigidbody2D.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
         }
+    }
+
+    void OnDeath(EventPlayerDeath eventPlayerDeath)
+    {
+        playerHasControl = false;
+        Debug.Log("Player died."); 
     }
 }
