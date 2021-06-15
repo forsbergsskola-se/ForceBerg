@@ -1,6 +1,6 @@
 namespace Traps
 {
-    public class Trap_Spike : Trap
+    public class TrapSpike : Trap
     {
         
     }
