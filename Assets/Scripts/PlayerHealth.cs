@@ -5,25 +5,23 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public Transform modelTransform;
-    public float regenTimeInSeconds;
     public int healthPerRegen;
-    public int maxHealth = 100;
-    private int health;
+    public float maxHealth = 100;
+    private float health;
 
     private void Start()
     {
         health = maxHealth;
-        StartCoroutine(RegenDamage());
     }
 
-    public int Health
+    public float Health
     {
         get => health;
         private set
         {
             health = Mathf.Clamp(value, 0, maxHealth);
-            modelTransform.localScale = new Vector3(Mathf.Lerp(1.5f, 1.0f, (float) health / maxHealth),
-                Mathf.Lerp(0.5f, 1.0f, (float) health / maxHealth), 1);
+            modelTransform.localScale = new Vector3(Mathf.Lerp(1.5f, 1.0f, health / maxHealth),
+                Mathf.Lerp(0.5f, 1.0f, health / maxHealth), 1);
         } 
     }
 
@@ -38,12 +36,11 @@ public class PlayerHealth : MonoBehaviour
         Health -= amount;
     }
 
-    IEnumerator RegenDamage()
+    private void Update()
     {
-        while (true)
+        if (Input.GetKey(KeyCode.F))
         {
-            yield return new WaitForSeconds(regenTimeInSeconds);
-            Health += healthPerRegen;
+            Health += healthPerRegen * Time.deltaTime;
         }
     }
 }

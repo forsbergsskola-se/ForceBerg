@@ -1,18 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SquishObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int squishAmount = 10;
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (other.gameObject.TryGetComponent<PlayerHealth>(out var health))
+        {
+            var rb2d = GetComponent<Rigidbody2D>();
+            var hitAmount = rb2d.velocity.magnitude;
+            var playerVelocity = other.rigidbody.velocity.magnitude;
+            Debug.Log(hitAmount - playerVelocity);
+            if (hitAmount < playerVelocity)
+                return;
+            health.TakeDamage(squishAmount);
+            Debug.Log(hitAmount);
+        }
     }
 }
