@@ -11,7 +11,7 @@ public class Flipable : MonoBehaviour
         MessageHandler.Instance().SubscribeMessage<EventDirectionChanged>(SetGravity);
     
 
-    private void OnDestroy() =>
+    private void OnDisable() =>
         MessageHandler.Instance().UnsubscribeMessage<EventDirectionChanged>(SetGravity);
     
 

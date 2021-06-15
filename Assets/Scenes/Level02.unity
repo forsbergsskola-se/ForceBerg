@@ -972,6 +972,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 432677347}
+  - {fileID: 1582021153}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2215,7 +2216,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 384503793}
     m_Modifications:
     - target: {fileID: 6087528359436385467, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: ShapeModule.m_Scale.x
@@ -2227,7 +2228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2247,15 +2248,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2275,6 +2276,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
+--- !u!4 &1582021153 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
+  m_PrefabInstance: {fileID: 1582021152}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1720379818
 GameObject:
   m_ObjectHideFlags: 0
