@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 331814911624326685}
   - component: {fileID: 1856284278003686728}
   - component: {fileID: 1535822700604578099}
+  - component: {fileID: 329630722}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -48,6 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1500
+  playerStamina: {fileID: 329630722}
+  maxVelocity: 15
 --- !u!50 &1856284278003686728
 Rigidbody2D:
   serializedVersion: 4
@@ -84,6 +87,22 @@ MonoBehaviour:
   modelTransform: {fileID: 5646578840397888339}
   healthPerRegen: 50
   maxHealth: 100
+--- !u!114 &329630722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331814911624326678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c023a8793e6fe428a1af96e4edbb87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amount: 30
+  decreasePerSecond: 10
+  regenPerSecond: 2
+  maxAmount: 30
 --- !u!1 &5646578840397888341
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +241,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 331814911624326672}
     m_Modifications:
+    - target: {fileID: 3425424154595181888, guid: 47c237de8a73889498ef33533b2169e2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425424154595181888, guid: 47c237de8a73889498ef33533b2169e2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3425424154595181888, guid: 47c237de8a73889498ef33533b2169e2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3425424154595181891, guid: 47c237de8a73889498ef33533b2169e2, type: 3}
       propertyPath: m_Name
       value: Main Camera

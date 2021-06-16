@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 5;
+    [SerializeField] private PlayerStamina playerStamina;
     [SerializeField] private float maxVelocity;
     private Rigidbody2D rigidbody2D;
     private bool playerHasControl = true;
@@ -29,22 +30,26 @@ public class Player : MonoBehaviour
 
     void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.Space) && playerStamina.IsNotEmpty)
+        {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Up));
-        else if (Input.GetKeyDown(KeyCode.S))
+            playerStamina.Decrease();
+        }
+        else
+        {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Down));
-
+            playerStamina.BeginRegen();
+        }
+        
         if (Input.GetKey(KeyCode.D))
         {
             rigidbody2D.AddForce(new Vector2(speed, 0) * Time.deltaTime);
-            if (rigidbody2D.velocity.magnitude < maxVelocity)
-            {
-                
-            }
+            rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, maxVelocity * -1, maxVelocity), rigidbody2D.velocity.y);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             rigidbody2D.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
+            rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, maxVelocity * -1, maxVelocity), rigidbody2D.velocity.y);
         }
     }
 
