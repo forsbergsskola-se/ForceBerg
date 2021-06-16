@@ -1,16 +1,19 @@
 using System;
-using EventBroker;
-using EventBroker.Events;
 using UnityEngine;
 
 public class PlayerStamina : MonoBehaviour
 {
-    public float amount;
+    public float maxAmount;
     public float decreasePerSecond;
     public float regenPerSecond;
-    public float maxAmount;
+    private float amount;
     private bool isRegenerating;
     public bool IsNotEmpty => Amount > 0;
+
+    private void Start()
+    {
+        amount = maxAmount;
+    }
 
     public float Amount
     {
@@ -39,5 +42,10 @@ public class PlayerStamina : MonoBehaviour
         {
             Amount += regenPerSecond * Time.deltaTime;
         }
+    }
+
+    private void OnValidate()
+    {
+        maxAmount = Mathf.Clamp(maxAmount, 0, float.MaxValue);
     }
 }
