@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.99501
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5056677
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41,15 +41,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722605, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1536804665953722610, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_Name
-      value: Trap_Blade
+      value: Trap_Blade_Black
       objectReference: {fileID: 0}
     - target: {fileID: 1536804667139562364, guid: 337b0a76a8b25454a86f94894f84ff1a, type: 3}
       propertyPath: m_Color.b
