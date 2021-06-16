@@ -4,26 +4,32 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    [SerializeField] private Vector2 bounceScale;
+
+    private bool inProgress = false;
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.TryGetComponent<Trap>(out var trap))
-        {
+        if (other.gameObject.TryGetComponent<Trap>(out var trap)) {
             Destroy(gameObject);
         }
-        else
-        {
-            StartCoroutine(Bounce());
+        if (inProgress) {
+            StopCoroutine(Bounce());
+            transform.localScale = Vector3.one;
         }
+        StartCoroutine(Bounce());
     }
 
-    IEnumerator Bounce()
+    private IEnumerator Bounce()
     {
+        inProgress = true;
         float elapsed = 0f;
-        transform.localScale = new Vector2(0.8f, 1.2f);
-        while (transform.localScale.x < 1 && transform.localScale.y > 1)
+        transform.localScale = new Vector2(bounceScale.x, bounceScale.y);
+        while (transform.localScale.x != 1 || transform.localScale.y != 1)
         {
             yield return null;
-            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, elapsed += Time.deltaTime);
+            transform.localScale = Vector3.Lerp(bounceScale, Vector3.one, elapsed);
+            elapsed += Time.deltaTime * 2;
         }
+        inProgress = false;
     }
 }
