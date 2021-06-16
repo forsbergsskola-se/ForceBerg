@@ -9,22 +9,35 @@ public class PlayerStamina : MonoBehaviour
     public float decreasePerSecond;
     public float regenPerSecond;
     public float maxAmount;
+    private bool isRegenerating;
     public bool IsNotEmpty => Amount > 0;
 
     public float Amount
     {
         get => amount;
-        private set => amount = Mathf.Clamp(value, -5, maxAmount);
+        private set
+        {
+            amount = Mathf.Clamp(value, -5, maxAmount);
+            Debug.Log($"Stamina Is {amount}");
+        }
     }
 
     public void Decrease()
     {
         Amount -= decreasePerSecond * Time.deltaTime;
+        isRegenerating = false;
+    }
+    
+    public void BeginRegen()
+    {
+        isRegenerating = true;
     }
 
     private void Update()
     {
-        Amount += regenPerSecond * Time.deltaTime;
-        Debug.Log($"Stamina Is {Amount}");
+        if (isRegenerating)
+        {
+            Amount += regenPerSecond * Time.deltaTime;
+        }
     }
 }

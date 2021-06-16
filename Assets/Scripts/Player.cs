@@ -38,6 +38,7 @@ public class Player : MonoBehaviour
         else
         {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Down));
+            playerStamina.BeginRegen();
         }
         
         if (Input.GetKey(KeyCode.D))
