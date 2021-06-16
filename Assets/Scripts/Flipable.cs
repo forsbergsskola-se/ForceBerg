@@ -1,9 +1,19 @@
 using System;
+using EventBroker;
+using EventBroker.Events;
 using UnityEngine;
 
 public class Flipable : MonoBehaviour
 {
-    public Direction direction;
+    public Direction direction = Direction.Down;
+
+    private void Start() =>
+        MessageHandler.Instance().SubscribeMessage<EventGravityChanged>(SetGravity);
+    
+
+    private void OnDisable() =>
+        MessageHandler.Instance().UnsubscribeMessage<EventGravityChanged>(SetGravity);
+    
 
     public Direction Direction
     {
@@ -11,7 +21,8 @@ public class Flipable : MonoBehaviour
         private set
         {
             direction = value;
-            Physics2D.gravity = direction switch
+            
+            Physics2D.gravity = Physics.gravity =direction switch //also sets the 3d gravity, it affects particles
             {
                 Direction.Up => new Vector2(0, 9.81f),
                 Direction.Left => new Vector2(-9.81f, 0),
@@ -22,9 +33,9 @@ public class Flipable : MonoBehaviour
         }
     }
 
-    public void SetGravity(Direction direction)
+    public void SetGravity(EventGravityChanged e)
     {
-        Direction = direction;
+        Direction = e.Direction;
     }
 }
 

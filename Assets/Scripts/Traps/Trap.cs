@@ -1,14 +1,19 @@
+using EventBroker;
+using EventBroker.Events;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public class Trap : MonoBehaviour
+namespace Traps
 {
-    private void OnCollisionEnter2D(Collision2D other)
+    [RequireComponent(typeof(Collider2D))]
+    public class Trap : MonoBehaviour
     {
-        if (other.gameObject.TryGetComponent<Player>(out var player))
+        private void OnCollisionEnter2D(Collision2D other)
         {
-            Debug.Log("Player collided with Trap : " +this.name);
-            //On Player Death
+            if (other.gameObject.TryGetComponent<Player>(out var player))
+            {
+                Debug.Log("Player collided with Trap : " +this.name);
+                MessageHandler.Instance().SendMessage(new EventPlayerDeath());
+            }
         }
     }
 }
