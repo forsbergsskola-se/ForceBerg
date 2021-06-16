@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Flipable : MonoBehaviour
 {
-    public Direction direction;
+    public Direction direction = Direction.Down;
 
     private void Start() =>
         MessageHandler.Instance().SubscribeMessage<EventGravityChanged>(SetGravity);
