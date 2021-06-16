@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1c023a8793e6fe428a1af96e4edbb87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 50
+  amount: 30
   decreasePerSecond: 10
   regenPerSecond: 2
-  maxAmount: 50
+  maxAmount: 30
 --- !u!1 &5646578840397888341
 GameObject:
   m_ObjectHideFlags: 0
