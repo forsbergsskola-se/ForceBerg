@@ -57,7 +57,7 @@ Transform:
   m_GameObject: {fileID: 686141952177316575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.4389, y: 4.653, z: 1}
+  m_LocalScale: {x: 6.4389, y: 4.5217853, z: 1}
   m_Children: []
   m_Father: {fileID: 686141951328856216}
   m_RootOrder: 0
@@ -186,5 +186,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemToSpawn: {fileID: 8311349172909723203, guid: 1b2dadcd04485134cb9137796efb65ae, type: 3}
-  birthOffset: {x: 0, y: 5}
+  birthOffset: {x: 0, y: -5}
   birthTime: 2
