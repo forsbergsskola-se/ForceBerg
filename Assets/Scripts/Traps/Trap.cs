@@ -14,6 +14,11 @@ namespace Traps
                 Debug.Log("Player collided with Trap : " +this.name);
                 MessageHandler.Instance().SendMessage(new EventPlayerDeath());
             }
+
+            if (other.gameObject.TryGetComponent<IDestructible>(out var destructible))
+            {
+                destructible.Die();
+            }
         }
     }
 }
