@@ -6,6 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 5;
+    [SerializeField] private float maxVelocity;
     private Rigidbody2D rigidbody2D;
     private bool playerHasControl = true;
 
@@ -36,6 +37,10 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rigidbody2D.AddForce(new Vector2(speed, 0) * Time.deltaTime);
+            if (rigidbody2D.velocity.magnitude < maxVelocity)
+            {
+                
+            }
         }
         else if (Input.GetKey(KeyCode.A))
         {
