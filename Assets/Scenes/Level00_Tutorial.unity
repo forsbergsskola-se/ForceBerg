@@ -1345,11 +1345,19 @@ PrefabInstance:
       value: WorldTextWithBounds3
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+    - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: 'Falling objects
 
         can squish you'
       objectReference: {fileID: 0}
+    - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1001 &1162786509
@@ -1408,9 +1416,17 @@ PrefabInstance:
       value: WorldTextWithBounds1
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+    - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: "A and D \nto move"
       objectReference: {fileID: 0}
+    - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1 &1198554338
@@ -2672,9 +2688,17 @@ PrefabInstance:
       value: WorldTextWithBounds2
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+    - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: "W and S \nto switch gravity"
       objectReference: {fileID: 0}
+    - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1001 &4499119606531343952
