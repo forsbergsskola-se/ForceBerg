@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] private Vector2 bounceScale;
+    [SerializeField] private float bounceThreshold;
 
     private bool inProgress = false;
     private void OnCollisionEnter2D(Collision2D other)
@@ -12,6 +13,9 @@ public class Ball : MonoBehaviour
         if (other.gameObject.TryGetComponent<Trap>(out var trap)) {
             Destroy(gameObject);
         }
+        Debug.Log("Current ball magnitude: " +transform.GetComponent<Rigidbody2D>().velocity.magnitude);
+        if (transform.GetComponent<Rigidbody2D>().velocity.magnitude < bounceThreshold)
+            return;
         if (inProgress) {
             StopCoroutine(Bounce());
             transform.localScale = Vector3.one;
@@ -22,6 +26,7 @@ public class Ball : MonoBehaviour
     private IEnumerator Bounce()
     {
         inProgress = true;
+        
         float elapsed = 0f;
         transform.localScale = new Vector2(bounceScale.x, bounceScale.y);
         while (transform.localScale.x != 1 || transform.localScale.y != 1)
