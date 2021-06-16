@@ -44,10 +44,12 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             rigidbody2D.AddForce(new Vector2(speed, 0) * Time.deltaTime);
+            rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, maxVelocity * -1, maxVelocity), rigidbody2D.velocity.y);
         }
         else if (Input.GetKey(KeyCode.A))
         {
             rigidbody2D.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
+            rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, maxVelocity * -1, maxVelocity), rigidbody2D.velocity.y);
         }
     }
 
