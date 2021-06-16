@@ -10,11 +10,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float maxVelocity;
     private Rigidbody2D rigidbody2D;
     private bool playerHasControl = true;
+    private AudioSource directionUpSfx;
 
     private void Start()
     {
         rigidbody2D = GetComponentInChildren<Rigidbody2D>();
         MessageHandler.Instance().SubscribeMessage<EventPlayerDeath>(OnDeath);
+        directionUpSfx = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -34,6 +36,7 @@ public class Player : MonoBehaviour
         {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Up));
             playerStamina.Decrease();
+            directionUpSfx.Play();
         }
         else
         {
