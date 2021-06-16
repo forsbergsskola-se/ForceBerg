@@ -23,7 +23,7 @@ public class GravitySwitchTimed : MonoBehaviour
     private IEnumerator GravityTimer()
     {
         inProgress = true;
-        Debug.Log("Gravity changed to : "+direction +"for " +duration +" seconds.");
+        Debug.Log("Gravity changed to : "+direction +" for " +duration +" seconds then back to "+previousDirection);
         MessageHandler.Instance().SendMessage(new EventGravityChanged(direction));
         yield return new WaitForSeconds(duration);
         MessageHandler.Instance().SendMessage(new EventGravityChanged(previousDirection));
