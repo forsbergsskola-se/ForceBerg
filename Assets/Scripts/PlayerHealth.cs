@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public Transform modelTransform;
     public int healthPerRegen;
     public float maxHealth = 100;
+    public float maxWidth = 1.6f;
+    public float minHeight = 0.4f;
     private float health;
 
     private void Start()
@@ -20,8 +22,8 @@ public class PlayerHealth : MonoBehaviour
         private set
         {
             health = Mathf.Clamp(value, 0, maxHealth);
-            modelTransform.localScale = new Vector3(Mathf.Lerp(1.5f, 1.0f, health / maxHealth),
-                Mathf.Lerp(0.5f, 1.0f, health / maxHealth), 1);
+            modelTransform.localScale = new Vector3(Mathf.Lerp(maxWidth, 1.0f, health / maxHealth),
+                Mathf.Lerp(minHeight, 1.0f, health / maxHealth), 1);
         } 
     }
 
