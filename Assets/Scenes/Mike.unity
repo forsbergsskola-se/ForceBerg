@@ -18166,6 +18166,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
+      propertyPath: direction.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
+      propertyPath: direction.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
+      propertyPath: speedMultiplier
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661244, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: m_Name
       value: ConveyorBelt_Right
@@ -18176,11 +18188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661247, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.19
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661247, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.03
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661247, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: m_LocalPosition.z
