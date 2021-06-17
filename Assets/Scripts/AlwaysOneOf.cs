@@ -6,11 +6,13 @@ public class AlwaysOneOf : MonoBehaviour
     [SerializeField] private GameObject itemToSpawn;
     [SerializeField] private Vector2 birthOffset;
     [SerializeField] private float birthTime = 2f;
+    [SerializeField] private float birthDelay = 3f;
+    [SerializeField] private float repeatEveryHowManySecAfterBirth = 3f;
 
     private GameObject spawnedItem;
 
     private void Start() =>
-        InvokeRepeating(nameof(SpawnItem), 3, 3);
+        InvokeRepeating(nameof(SpawnItem), birthDelay, repeatEveryHowManySecAfterBirth);
 
     public void SpawnItem()
     {
