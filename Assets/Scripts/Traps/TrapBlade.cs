@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Traps
@@ -6,9 +7,10 @@ namespace Traps
     {
         [SerializeField] private float rotationSpeed;
         [SerializeField] private Transform blades;
+        
         void Update()
         {
-            blades.Rotate(Vector3.back * (rotationSpeed * Time.deltaTime));        
+            blades.Rotate(Vector3.back * (rotationSpeed * Time.deltaTime));
         }
     }
 }
