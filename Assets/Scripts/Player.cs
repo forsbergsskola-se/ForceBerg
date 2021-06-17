@@ -3,7 +3,7 @@ using EventBroker;
 using EventBroker.Events;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDestructible
 {
     public float speed = 5;
     [SerializeField] private PlayerStamina playerStamina;
@@ -60,5 +60,10 @@ public class Player : MonoBehaviour
     {
         playerHasControl = false;
         Debug.Log("Player died."); 
+    }
+
+    public void Die()
+    {
+        MessageHandler.Instance().SendMessage(new EventPlayerDeath());
     }
 }
