@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331814911624326678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.68, y: -3, z: -1}
+  m_LocalPosition: {x: 0.68, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 331814910209865573}
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5646578840397888339}
   - component: {fileID: 5646578840397888338}
-  - component: {fileID: 8287684023651485107}
+  - component: {fileID: 7451318591706200906}
   m_Layer: 6
   m_Name: Model
   m_TagString: Player
@@ -283,7 +283,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8287684023651485107
+--- !u!60 &7451318591706200906
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -308,14 +308,20 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.3226614, y: 0.9578252}
-      - {x: -0.27550697, y: 0.9578252}
-      - {x: -0.46328735, y: 0.85923386}
-      - {x: -0.47047806, y: -0.86981344}
-      - {x: -0.36082172, y: -0.96591806}
-      - {x: 0.36148262, y: -0.9687495}
-      - {x: 0.46692085, y: -0.8633115}
-      - {x: 0.4627037, y: 0.8616593}
+    - - {x: 0.5, y: 0.921875}
+      - {x: 0.4296875, y: 0.984375}
+      - {x: 0.28125, y: 1}
+      - {x: -0.28125, y: 1}
+      - {x: -0.4296875, y: 0.9765625}
+      - {x: -0.5, y: 0.921875}
+      - {x: -0.5, y: -0.90625}
+      - {x: -0.4609375, y: -0.9453125}
+      - {x: -0.390625, y: -0.9921875}
+      - {x: -0.21875, y: -1}
+      - {x: 0.234375, y: -1}
+      - {x: 0.3828125, y: -0.984375}
+      - {x: 0.46875, y: -0.9375}
+      - {x: 0.5, y: -0.90625}
 --- !u!1001 &3103924596593455834
 PrefabInstance:
   m_ObjectHideFlags: 0
