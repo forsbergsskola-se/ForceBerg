@@ -1,4 +1,5 @@
 using System;
+using EventBroker;
 using UnityEngine;
 
 public class PlayerStamina : MonoBehaviour
@@ -21,6 +22,7 @@ public class PlayerStamina : MonoBehaviour
         private set
         {
             amount = Mathf.Clamp(value, -5, maxAmount);
+            MessageHandler.Instance().SendMessage(new StaminaAmountEvent(amount / maxAmount));
             Debug.Log($"Stamina Is {amount}");
         }
     }
@@ -48,4 +50,11 @@ public class PlayerStamina : MonoBehaviour
     {
         maxAmount = Mathf.Clamp(maxAmount, 0, float.MaxValue);
     }
+}
+
+class StaminaAmountEvent
+{
+    public readonly float percent;
+
+    public StaminaAmountEvent(float percent) => this.percent = percent;
 }

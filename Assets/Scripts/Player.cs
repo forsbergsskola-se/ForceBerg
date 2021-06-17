@@ -34,10 +34,13 @@ public class Player : MonoBehaviour, IDestructible {
     }
 
     void CheckInput() {
+        if (Input.GetKeyDown(KeyCode.Space) && playerStamina.IsNotEmpty) {
+            spaceBarSfx.Play();
+        }
+        
         if (Input.GetKey(KeyCode.Space) && playerStamina.IsNotEmpty) {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Up));
             playerStamina.Decrease();
-            spaceBarSfx.Play();
         } else {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Down));
             playerStamina.BeginRegen();
