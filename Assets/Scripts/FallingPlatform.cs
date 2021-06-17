@@ -6,6 +6,7 @@ using UnityEngine;
 public class FallingPlatform : MonoBehaviour
 {
     private Rigidbody2D rb;
+    [SerializeField] private float destroyTime = 1.5f;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,6 +18,6 @@ public class FallingPlatform : MonoBehaviour
         if (!other.gameObject.CompareTag("Player")) return;
 
         rb.bodyType = RigidbodyType2D.Dynamic;
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, destroyTime);
     }
 }
