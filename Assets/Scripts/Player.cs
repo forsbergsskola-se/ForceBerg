@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using EventBroker;
 using EventBroker.Events;
 using Unity.Mathematics;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour, IDestructible {
     public float speed = 5;
+    [SerializeField] private PauseMenu pauseMenuPrefab;
     [SerializeField] private PlayerStamina playerStamina;
     [SerializeField] private float maxVelocity;
     [SerializeField] private GameObject destroyedCanPrefab;
@@ -27,6 +29,22 @@ public class Player : MonoBehaviour, IDestructible {
             CheckInput();
         if (Input.GetKey(KeyCode.R))
             ResetGame();
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+        {
+            TogglePauseMenu();
+        }
+    }
+
+    private void TogglePauseMenu()
+    {
+        var pauseMenu = FindObjectOfType<PauseMenu>();
+        if (pauseMenu == null)
+        {
+            pauseMenu = Instantiate(pauseMenuPrefab);
+            pauseMenu.Setup();
+        }
+        else
+            pauseMenu.Disable();
     }
 
     void ResetGame() {
@@ -65,7 +83,18 @@ public class Player : MonoBehaviour, IDestructible {
         staminaBar.SetActive(false);
         rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
         Instantiate(destroyedCanPrefab, this.transform.position, quaternion.identity);
-        Debug.Log("Player died.");
+        StartCoroutine(ShowMenuAfterSeconds(6f));
+    }
+
+    IEnumerator ShowMenuAfterSeconds(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        var pauseMenu = FindObjectOfType<PauseMenu>();
+        if (pauseMenu == null)
+        {
+            pauseMenu = Instantiate(pauseMenuPrefab);
+            pauseMenu.Setup();
+        }
     }
 
     public void Die() {
