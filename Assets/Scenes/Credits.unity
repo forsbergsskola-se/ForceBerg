@@ -1159,7 +1159,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
   m_Text: "Michael \"AlCh3mi\" van der Poll\nFredrik \"Xoduz\" Wallander\nLinus \"Lynkan\"
-    \xC5kesson\nJack \"Jackoberto\" Karlsson\nThomas \"TBA\" Ahlstr\xF6m \nCristel
+    \xC5kesson\nJack \"Jackoberto\" Karlsson\nThomas \" \" Ahlstr\xF6m \nCristel
     \"Crissan\" Capetillo\n\n"
 --- !u!222 &580109091
 CanvasRenderer:
@@ -5226,7 +5226,7 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
   m_Text: "Michael \"AlCh3mi\" van der Poll\nFredrik \"Xoduz\" Wallander\nLinus \"Lynkan\"
-    \xC5kesson\nJack \"Jackoberto\" Karlsson\nThomas \"TBA\" Ahlstr\xF6m \nCristel
+    \xC5kesson\nJack \"Jackoberto\" Karlsson\nThomas \" \" Ahlstr\xF6m \nCristel
     \"Crissan\" Capetillo"
 --- !u!222 &2034064173
 CanvasRenderer:
