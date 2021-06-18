@@ -11,13 +11,14 @@ public class CanSpriteDrop : MonoBehaviour {
     {
         canSprite = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
-        startingPosition = transform.position;
+        startingPosition = canSprite.anchoredPosition;
     }
  
-    void Update () 
+    void Update ()
     {
-        transform.Translate(0f, speed, 0f);
-        if (canSprite.position.y < - canSprite.rect.height)
-            transform.position = new Vector3(startingPosition.x, canvas.rect.height + canSprite.rect.height, startingPosition.z);
+        canSprite.anchoredPosition += new Vector2(0, speed * Time.deltaTime);
+        var totalHeight = canSprite.anchoredPosition.y + canSprite.rect.height;
+        if (totalHeight < 0.0f)
+            canSprite.anchoredPosition = new Vector3(startingPosition.x, canvas.rect.height + canSprite.rect.height, startingPosition.z);
     }
 }
