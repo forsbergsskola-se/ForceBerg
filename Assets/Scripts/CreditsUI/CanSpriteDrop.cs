@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TreeEditor;
 using UnityEngine;
 
 public class CanSpriteDrop : MonoBehaviour {
@@ -15,7 +12,7 @@ public class CanSpriteDrop : MonoBehaviour {
         canSprite = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        speed = -5.0f;
+        speed = -5f;
     }
  
     void Update () 
