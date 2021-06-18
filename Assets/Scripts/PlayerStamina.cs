@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using EventBroker;
 using UnityEngine;
 
@@ -7,8 +8,10 @@ public class PlayerStamina : MonoBehaviour
     public float maxAmount;
     public float decreasePerSecond;
     public float regenPerSecond;
+    public float regenDelay;
     private float amount;
-    private bool isRegenerating;
+    private IEnumerator regeneration;
+    
     public bool IsNotEmpty => Amount > 0;
 
     private void Start()
@@ -28,20 +31,22 @@ public class PlayerStamina : MonoBehaviour
 
     public void Decrease()
     {
+        if (regeneration != null)
+        {
+            StopCoroutine(regeneration);
+        }
         Amount -= decreasePerSecond * Time.deltaTime;
-        isRegenerating = false;
-    }
-    
-    public void BeginRegen()
-    {
-        isRegenerating = true;
+        regeneration = DelayedRegen();
+        StartCoroutine(regeneration);
     }
 
-    private void Update()
+    IEnumerator DelayedRegen()
     {
-        if (isRegenerating)
+        yield return new WaitForSeconds(regenDelay);
+        while (true)
         {
             Amount += regenPerSecond * Time.deltaTime;
+            yield return null;
         }
     }
 
@@ -49,11 +54,4 @@ public class PlayerStamina : MonoBehaviour
     {
         maxAmount = Mathf.Clamp(maxAmount, 0, float.MaxValue);
     }
-}
-
-class StaminaAmountEvent
-{
-    public readonly float percent;
-
-    public StaminaAmountEvent(float percent) => this.percent = percent;
 }

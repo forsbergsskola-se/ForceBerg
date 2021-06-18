@@ -65,7 +65,6 @@ public class Player : MonoBehaviour, IDestructible {
             playerStamina.Decrease();
         } else {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Down));
-            playerStamina.BeginRegen();
         }
 
         if (Input.GetKey(KeyCode.D)) {
