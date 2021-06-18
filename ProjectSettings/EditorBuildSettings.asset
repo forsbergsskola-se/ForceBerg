@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level09_HurryUp.unity
     guid: 983183891bf80544b8a15f45000a97c9
   - enabled: 1
+    path: Assets/Scenes/Level10_Escort.unity
+    guid: 5c2a1b2b71614db4da01cf7d3ecf3279
+  - enabled: 1
     path: Assets/Scenes/Level97_EasyPeasy.unity
     guid: 2a784f778a08a492d9ea2aff7e6ef791
   - enabled: 1
