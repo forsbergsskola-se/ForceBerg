@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1500
+  pauseMenuPrefab: {fileID: 3318619202493693680, guid: 06f00d770a72b7b49a225bbcebebf4cf, type: 3}
   playerStamina: {fileID: 329630722}
   maxVelocity: 15
   destroyedCanPrefab: {fileID: 3911077501546396260, guid: 641144dc9ad767840b76558763a37e5e, type: 3}
@@ -321,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxAmount: 50
   decreasePerSecond: 10
-  regenPerSecond: 4
+  regenPerSecond: 6
 --- !u!82 &6030405637002908577
 AudioSource:
   m_ObjectHideFlags: 0
@@ -433,7 +434,6 @@ MonoBehaviour:
   model: {fileID: 5646578840397888339}
   startTimeBtwSpawns: 0.1
   echo: {fileID: 3096360008540455799, guid: 4deef07e57e00d7459b5890cea6e66ed, type: 3}
-  playerModelGO: {fileID: 5646578840397888341}
 --- !u!1 &5646578840397888341
 GameObject:
   m_ObjectHideFlags: 0

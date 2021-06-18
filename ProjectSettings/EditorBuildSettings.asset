@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level01_Tutorial02.unity
     guid: 995cad339376d3a4585c164d73a079b7
   - enabled: 1
+    path: Assets/Scenes/Level01_Tutorial03.unity
+    guid: 7023258804d16184da31791abd033e92
+  - enabled: 1
     path: Assets/Scenes/Level02_Saws.unity
     guid: bb5d5671777c7cf438b8970d53564990
   - enabled: 1
@@ -29,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level06_Sorting.unity
     guid: d95eaab6a1f39ff40a5533ec064965e4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level07_UnstablePlatforms.unity
     guid: 32dfa9ad69ed0584eb57a395fe12485e
   - enabled: 1

@@ -20,10 +20,8 @@ public class ColorChange : MonoBehaviour {
 
         void ChangeColor() {
             if (playerSprite.color == Color.black) {
-                Debug.Log("color is black, changing to white");
                 playerSprite.color = Color.white;
             } else {
-                Debug.Log("color is white, changing to black");
                 playerSprite.color = Color.black;
             }
         }

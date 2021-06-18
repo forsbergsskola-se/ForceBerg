@@ -12,12 +12,10 @@ public class SquishObject : MonoBehaviour
             var hitAmount = rb2d.velocity.magnitude;
             var playerVelocity = other.rigidbody.velocity.magnitude;
             var squishSfx = GetComponent<AudioSource>();
-            Debug.Log(hitAmount - playerVelocity);
             if (hitAmount < playerVelocity)
                 return;
             health.TakeDamage(squishAmount);
             squishSfx.Play();
-            Debug.Log(hitAmount);
         }
     }
 }
