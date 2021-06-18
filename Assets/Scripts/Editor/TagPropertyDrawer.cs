@@ -1,15 +1,12 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace Editor
+[CustomPropertyDrawer(typeof(TagWrapperAttribute))]
+public class TagPropertyDrawer : PropertyDrawer
 {
-    [CustomPropertyDrawer(typeof(TagWrapperAttribute))]
-    public class TagPropertyDrawer : PropertyDrawer
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
     {
-        public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
-        {
-            EditorGUI.BeginProperty(position, label, property); 
-            property.stringValue = EditorGUI.TagField(position, property.stringValue);
-        }
+        EditorGUI.BeginProperty(position, label, property);
+        property.stringValue = EditorGUI.TagField(position, property.stringValue);
     }
 }
