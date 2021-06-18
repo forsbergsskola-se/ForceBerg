@@ -101,7 +101,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.55}
-  m_ConnectedAnchor: {x: 0, y: -0.16400051}
+  m_ConnectedAnchor: {x: 0, y: -0.15}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -248,7 +248,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.55}
-  m_ConnectedAnchor: {x: 0, y: -0.16400051}
+  m_ConnectedAnchor: {x: 0, y: -0.15}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -801,7 +801,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.55}
-  m_ConnectedAnchor: {x: 0, y: -0.16400051}
+  m_ConnectedAnchor: {x: 0, y: -0.15}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -893,9 +893,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.025}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
 --- !u!50 &5140226197080824778
 Rigidbody2D:
   serializedVersion: 4
@@ -932,7 +932,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: 0.87800026}
+  m_ConnectedAnchor: {x: 0, y: 0.875}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1042,7 +1042,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.55}
-  m_ConnectedAnchor: {x: 0, y: -0.16400051}
+  m_ConnectedAnchor: {x: 0, y: -0.15}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1189,7 +1189,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.55}
-  m_ConnectedAnchor: {x: 0, y: -0.16400051}
+  m_ConnectedAnchor: {x: 0, y: -0.15}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1336,7 +1336,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.55}
-  m_ConnectedAnchor: {x: 0, y: -0.16400051}
+  m_ConnectedAnchor: {x: 0, y: -0.15}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
