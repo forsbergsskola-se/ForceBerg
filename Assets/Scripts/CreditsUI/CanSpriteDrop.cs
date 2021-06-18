@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class CanSpriteDrop : MonoBehaviour {
     
-    private RectTransform canvas;
-    private RectTransform canSprite;
-    private Vector3 startingPosition;
+    RectTransform canvas;
+    RectTransform canSprite;
+    Vector3 startingPosition;
     public float speed;
  
     void Start()
@@ -12,7 +12,6 @@ public class CanSpriteDrop : MonoBehaviour {
         canSprite = gameObject.GetComponent<RectTransform>();
         canvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
         startingPosition = transform.position;
-        speed = -5.0f;
     }
  
     void Update () 
