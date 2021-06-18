@@ -23,7 +23,6 @@ namespace Traps
             if (other.gameObject.TryGetComponent<IDestructible>(out var destructible))
             {
                 trapSfx.Play();
-                Debug.Log(other.gameObject.name+" collided with Trap : " +this.name);
                 destructible.Die();
             }
         }

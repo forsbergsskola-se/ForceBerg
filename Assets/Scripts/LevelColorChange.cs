@@ -10,13 +10,11 @@ public class LevelColorChange : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<Player>(out var player))
         {
-            Debug.Log("Level color changed to : "+color);
             MessageHandler.Instance().SendMessage(new EventLevelColorChange(color));
         }
 
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Level color changed to : "+color);
             MessageHandler.Instance().SendMessage(new EventLevelColorChange(color));
         }
     }

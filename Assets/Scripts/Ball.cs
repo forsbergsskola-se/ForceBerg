@@ -13,7 +13,6 @@ public class Ball : MonoBehaviour
         if (other.gameObject.TryGetComponent<Trap>(out var trap)) {
             Destroy(gameObject);
         }
-        Debug.Log("Current ball magnitude: " +transform.GetComponent<Rigidbody2D>().velocity.magnitude);
         if (transform.GetComponent<Rigidbody2D>().velocity.magnitude < bounceThreshold)
             return;
         if (inProgress) {

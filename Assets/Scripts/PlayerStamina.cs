@@ -23,7 +23,6 @@ public class PlayerStamina : MonoBehaviour
         {
             amount = Mathf.Clamp(value, -5, maxAmount);
             MessageHandler.Instance().SendMessage(new StaminaAmountEvent(amount / maxAmount));
-            Debug.Log($"Stamina Is {amount}");
         }
     }
 
