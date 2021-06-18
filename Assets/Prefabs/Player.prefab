@@ -265,6 +265,8 @@ MonoBehaviour:
   speed: 1500
   playerStamina: {fileID: 329630722}
   maxVelocity: 15
+  destroyedCanPrefab: {fileID: 3911077501546396260, guid: 641144dc9ad767840b76558763a37e5e, type: 3}
+  toDeactivate: {fileID: 5646578840397888341}
 --- !u!50 &1856284278003686728
 Rigidbody2D:
   serializedVersion: 4
