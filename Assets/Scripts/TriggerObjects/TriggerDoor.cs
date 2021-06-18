@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using EventBroker;
 using UnityEngine;
@@ -78,91 +79,11 @@ public class TriggerDoor : MonoBehaviour
                     cogWheel.SetTrigger(Open);
                 }
             }
-            // if (doorIsMoving)
-            // {
-            //     if (currentState == doorState.Open)
-            //     {
-            //         StopCoroutine(moveDoor);
-            //         moveDoor = MoveDoor();
-            //         StartCoroutine(moveDoor);   
-            //     }
-            //     else
-            //     {
-            //         StopCoroutine(moveDoor);
-            //         moveDoor = MoveDoor();
-            //         StartCoroutine(moveDoor); 
-            //     }
-            // }
-            // else
-            // {
-            //     if (currentState == doorState.Close)
-            //     {
-            //         moveDoor = MoveDoor();
-            //         StartCoroutine(moveDoor);
-            //     }
-            //     else
-            //     {
-            //         moveDoor = MoveDoor();
-            //         StartCoroutine(moveDoor);
-            //     }
-            // }
         }   
     }
 
-
-    float GetDistanceRemainingInPercentage()
+    private void OnDestroy()
     {
-        if (currentState == doorState.Open)
-        {
-            var distance = transform.position.y - openPos.y;
-            var originalDistance = openPos.y - origPos.y;
-            var percentage = distance / originalDistance;
-
-            return percentage;
-        }
-        else
-        {
-            var distance = origPos.y - transform.position.y;
-            var originalDistance = openPos.y - origPos.y;
-            var percentage = distance / originalDistance;
-
-            return percentage;
-        }
-    }
-
-    IEnumerator MoveDoor()
-    {
-        doorIsMoving = true;
-
-        //var timeElapsed = GetDistanceRemainingInPercentage();
-        var timeElapsed = 0.0f;
-
-        while (true)
-        {
-            if (this.currentState == doorState.Open)
-            {
-                float newYValue = Mathf.Lerp(transform.position.y, origPos.y, timeElapsed);
-                this.transform.position = new Vector3(this.transform.position.x, newYValue, this.transform.position.z);
-            }
-            else
-            {
-                float newYValue = Mathf.Lerp(openPos.y, transform.position.y, timeElapsed);
-                this.transform.position = new Vector3(this.transform.position.x, newYValue, this.transform.position.z);
-            }
-            
-            timeElapsed += Time.deltaTime;
-            
-            if (timeElapsed >= doorOpenSpeed)
-                break;
-            
-            yield return null;
-        }
-
-        if (currentState == doorState.Open)
-            currentState = doorState.Close;
-        else currentState = doorState.Open;
-        
-        doorIsMoving = false;
-        yield return null;
+        MessageHandler.Instance().UnsubscribeMessage<EventTriggerPlate>(SetState);
     }
 }
