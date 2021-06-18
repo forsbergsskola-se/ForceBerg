@@ -249,7 +249,6 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 12e873cbc2077144a9243c16e7938c2f, type: 3}
   - {fileID: 102900000, guid: c6e6839c52c6bcc4ca6542322d256c28, type: 3}
   - {fileID: 102900000, guid: d95eaab6a1f39ff40a5533ec064965e4, type: 3}
-  - {fileID: 102900000, guid: 32dfa9ad69ed0584eb57a395fe12485e, type: 3}
   - {fileID: 102900000, guid: 8d401033764019446bf09a4508677533, type: 3}
   - {fileID: 102900000, guid: 983183891bf80544b8a15f45000a97c9, type: 3}
   - {fileID: 102900000, guid: 5c2a1b2b71614db4da01cf7d3ecf3279, type: 3}
@@ -258,13 +257,12 @@ MonoBehaviour:
   scenes:
   - Level00_Tutorial01
   - Level01_Tutorial02
-  - Level01_Tutorial03_Inflate
+  - Level01_Tutorial03
   - Level02_Saws
   - Level03_PressurePlate
   - Level04_Conveyors
   - Level05_TickTock
   - Level06_Sorting
-  - Level07_UnstablePlatforms
   - Level08_Level_9000
   - Level09_HurryUp
   - Level10_Escort
