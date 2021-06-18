@@ -1,6 +1,7 @@
 using System;
 using EventBroker;
 using EventBroker.Events;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,8 @@ public class Player : MonoBehaviour, IDestructible {
     public float speed = 5;
     [SerializeField] private PlayerStamina playerStamina;
     [SerializeField] private float maxVelocity;
+    [SerializeField] private GameObject destroyedCanPrefab;
+    [SerializeField] private GameObject toDeactivate;
     private Rigidbody2D rigidbody2D;
     private bool playerHasControl = true;
     private AudioSource spaceBarSfx;
@@ -57,6 +60,8 @@ public class Player : MonoBehaviour, IDestructible {
 
     void OnDeath(EventPlayerDeath eventPlayerDeath) {
         playerHasControl = false;
+        toDeactivate.GetComponent<SpriteRenderer>().sprite = null;
+        Instantiate(destroyedCanPrefab, this.transform.position, quaternion.identity);
         Debug.Log("Player died.");
     }
 
