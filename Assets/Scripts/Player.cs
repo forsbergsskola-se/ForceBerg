@@ -11,6 +11,7 @@ public class Player : MonoBehaviour, IDestructible {
     [SerializeField] private float maxVelocity;
     [SerializeField] private GameObject destroyedCanPrefab;
     [SerializeField] private GameObject toDeactivate;
+    [SerializeField] private GameObject staminaBar;
     private Rigidbody2D rigidbody2D;
     private bool playerHasControl = true;
     private AudioSource spaceBarSfx;
@@ -60,7 +61,9 @@ public class Player : MonoBehaviour, IDestructible {
 
     void OnDeath(EventPlayerDeath eventPlayerDeath) {
         playerHasControl = false;
-        toDeactivate.GetComponent<SpriteRenderer>().sprite = null;
+        toDeactivate.SetActive(false);
+        staminaBar.SetActive(false);
+        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
         Instantiate(destroyedCanPrefab, this.transform.position, quaternion.identity);
         Debug.Log("Player died.");
     }
