@@ -5,13 +5,11 @@ public class TimeSlow : MonoBehaviour
     public float timeScale;
     private PlayerStamina stamina;
     
-    void Start()
-    {
+    void Start() {
         stamina = GetComponent<PlayerStamina>();
     }
 
-    void Update()
-    {
+    void Update() {
         if (Input.GetKey(KeyCode.LeftControl)) {
             if (stamina.IsNotEmpty)
                 SlowTime();
@@ -22,14 +20,11 @@ public class TimeSlow : MonoBehaviour
             NormalTime();
     }
 
-    public void SlowTime()
-    {
+    public void SlowTime() {
         stamina.Decrease();
         Time.timeScale = timeScale;
     }
 
-    public void NormalTime()
-    {
+    public void NormalTime() =>
         Time.timeScale = 1f;
-    }
 }
