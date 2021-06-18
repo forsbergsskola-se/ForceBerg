@@ -7,10 +7,10 @@ namespace Traps
     [RequireComponent(typeof(Collider2D))]
     public class Trap : MonoBehaviour
     {
-        private AudioSource bladeSfx;
+        private AudioSource trapSfx;
 
         void Start() {
-            bladeSfx = GetComponent<AudioSource>();
+            trapSfx = GetComponent<AudioSource>();
         }
         private void OnCollisionEnter2D(Collision2D other)
         {
@@ -22,7 +22,7 @@ namespace Traps
 
             if (other.gameObject.TryGetComponent<IDestructible>(out var destructible))
             {
-                bladeSfx.Play();
+                trapSfx.Play();
                 Debug.Log(other.gameObject.name+" collided with Trap : " +this.name);
                 destructible.Die();
             }
