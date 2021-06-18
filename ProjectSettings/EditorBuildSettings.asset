@@ -24,11 +24,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Level04_Conveyors.unity
     guid: 12e873cbc2077144a9243c16e7938c2f
   - enabled: 1
+    path: Assets/Scenes/TickTock.unity
+    guid: c6e6839c52c6bcc4ca6542322d256c28
+  - enabled: 1
     path: Assets/Scenes/Level05_Sorting.unity
     guid: d95eaab6a1f39ff40a5533ec064965e4
   - enabled: 1
     path: Assets/Scenes/Level06_UnstablePlatforms.unity
     guid: 32dfa9ad69ed0584eb57a395fe12485e
+  - enabled: 1
+    path: Assets/Scenes/Level_9000.unity
+    guid: 8d401033764019446bf09a4508677533
+  - enabled: 1
+    path: Assets/Scenes/HurryUp.unity
+    guid: 983183891bf80544b8a15f45000a97c9
+  - enabled: 1
+    path: Assets/Scenes/Level97_EasyPeasy.unity
+    guid: 2a784f778a08a492d9ea2aff7e6ef791
   - enabled: 1
     path: Assets/Scenes/Level98_End.unity
     guid: 6f8165f962214364bbe2635b31709ad2

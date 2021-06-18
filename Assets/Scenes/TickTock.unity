@@ -66380,7 +66380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPosition: {fileID: 1145383395}
   triggerKey: 15
-  doorOpenSpeed: 1
+  doorOpenSpeed: 0.4
 --- !u!61 &662354930
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -67193,6 +67193,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 979998161}
     m_Modifications:
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
+      propertyPath: force
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: direction.x
       value: -1
       objectReference: {fileID: 0}
@@ -67262,8 +67266,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6087528359436385469, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -36.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6087528359436385469, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.68
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6087528360471801954, guid: 76864a83e49682240ad5c35ed9fa23d6, type: 3}
       propertyPath: m_RootOrder
@@ -68298,6 +68306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979998161}
     m_Modifications:
+    - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
+      propertyPath: force
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: direction.x
       value: -1
