@@ -1,6 +1,6 @@
 using UnityEngine;
 public class ScaleChanger : MonoBehaviour {
-    public Vector3 scaler;
+    private Vector3 scaler;
     public float toScaleDown;
     private void Start() {
         scaler = this.transform.localScale; 
