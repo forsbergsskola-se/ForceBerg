@@ -1,9 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class FallingPlatform : MonoBehaviour
+public class FallingPlatform : MonoBehaviour, IDestructible
 {
     private Rigidbody2D rb;
     [SerializeField] private float destroyTime = 1.5f;
@@ -23,4 +20,6 @@ public class FallingPlatform : MonoBehaviour
         Destroy(gameObject, destroyTime);
         fallingPlatformSfx.Play();
     }
+
+    public void Die() => Destroy(gameObject);
 }

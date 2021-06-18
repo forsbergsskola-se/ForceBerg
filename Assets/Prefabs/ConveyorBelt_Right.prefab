@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   force: 500
   direction: {x: 1, y: 0}
+  speedMultiplier: 1
