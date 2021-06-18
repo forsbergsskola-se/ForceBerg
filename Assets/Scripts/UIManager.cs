@@ -38,7 +38,11 @@ public class UIManager : MonoBehaviour {
     public void StartApplicationButton() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
+    
+    public void GoToCreditsButton() {
+        SceneManager.LoadScene("Scenes/Credits");
+    }
+    
     public void ExitApplicationButton() {
         Application.Quit();
     }
