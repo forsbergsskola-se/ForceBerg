@@ -43,8 +43,16 @@ public class UIManager : MonoBehaviour {
         SceneManager.LoadScene("Scenes/Credits");
     }
     
+    public void GoToMainMenuButton() {
+        SceneManager.LoadScene("Scenes/MainMenu");
+    }
+    
     public void ExitApplicationButton() {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
         Application.Quit();
+#endif
     }
 
     static void QuitButton() {
