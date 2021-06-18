@@ -68454,7 +68454,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: force
-      value: 220
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: direction.x
