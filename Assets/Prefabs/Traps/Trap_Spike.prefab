@@ -71,9 +71,9 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0, y: 0.6}
-      - {x: 0.6, y: -0.6}
-      - {x: -0.6, y: -0.6}
+    - - {x: -0.5, y: -0.5}
+      - {x: 0, y: 0.5}
+      - {x: 0.5, y: -0.5}
 --- !u!82 &1116551438757122794
 AudioSource:
   m_ObjectHideFlags: 0

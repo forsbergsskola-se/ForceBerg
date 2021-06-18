@@ -6,6 +6,7 @@ public class TriggerDoor : MonoBehaviour
 {
 
     public Transform endPosition;
+    public Animator[] cogWheels;
     
     public int triggerKey;
     public float doorOpenSpeed;
@@ -22,7 +23,9 @@ public class TriggerDoor : MonoBehaviour
     private float journeyLength;
 
     private IEnumerator moveDoor;
-    
+    private static readonly int Open = Animator.StringToHash("Open");
+    private static readonly int Close = Animator.StringToHash("Close");
+
     private enum doorState
     {
         Open,
@@ -61,11 +64,19 @@ public class TriggerDoor : MonoBehaviour
             {
                 startTime = Time.time;
                 currentState = doorState.Close;
+                foreach (var cogWheel in cogWheels)
+                {
+                    cogWheel.SetTrigger(Close);
+                }
             }
             else
             {
                 startTime = Time.time;
                 currentState = doorState.Open;
+                foreach (var cogWheel in cogWheels)
+                {
+                    cogWheel.SetTrigger(Open);
+                }
             }
             // if (doorIsMoving)
             // {
