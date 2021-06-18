@@ -7,7 +7,7 @@ public class EchoEffect : MonoBehaviour
     [SerializeField] private float startTimeBtwSpawns;
     [SerializeField] private GameObject echo;
     void Update() {
-        if (!(this.GetComponent<Rigidbody2D>().velocity.magnitude > 0.1f)) return;
+        if (!(this.GetComponent<Rigidbody2D>().velocity.magnitude > 1f)) return;
         if (timeBtwSpawns <= 0) {
             GameObject instance = Instantiate(echo, this.transform.position, quaternion.identity);
             instance.transform.GetChild(0).localScale = model.localScale;
