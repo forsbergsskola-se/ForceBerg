@@ -66091,7 +66091,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: force
-      value: 300
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: direction.x
@@ -66668,7 +66668,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: force
-      value: 300
+      value: 220
       objectReference: {fileID: 0}
     - target: {fileID: 2081272680677661232, guid: 9d46ba01b84300a4db18170369aac45a, type: 3}
       propertyPath: direction.x
