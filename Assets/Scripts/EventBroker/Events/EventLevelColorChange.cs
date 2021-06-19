@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EventBroker.Events
+namespace Events
 {
     public class EventLevelColorChange
     {

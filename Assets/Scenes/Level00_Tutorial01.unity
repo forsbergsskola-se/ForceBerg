@@ -554,7 +554,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
-      value: "A and D \nto move"
+      value: "A / <- and \nD / -> to move"
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -24944,11 +24944,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
-      value: 'Holding Space
-
-        Makes Gravity
-
-        Inverse'
+      value: "Holding \nSpace / Up Arrow\nInverses Gravity"
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Materials.Array.data[0]

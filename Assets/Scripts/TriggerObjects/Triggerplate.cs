@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using EventBroker;
+using Events;
 using UnityEngine;
 
 public class Triggerplate : MonoBehaviour

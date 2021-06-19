@@ -1,6 +1,6 @@
 using System.Collections;
 using EventBroker;
-using EventBroker.Events;
+using Events;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,13 +13,13 @@ public class Player : MonoBehaviour, IDestructible {
     [SerializeField] private GameObject destroyedCanPrefab;
     [SerializeField] private GameObject toDeactivate;
     [SerializeField] private GameObject staminaBar;
+    [SerializeField] private PlayerHealth playerHealth;
     private Rigidbody2D rb;
     private bool playerHasControl = true;
     private AudioSource spaceBarSfx;
 
     private void Start() {
         rb = GetComponentInChildren<Rigidbody2D>();
-        MessageHandler.Instance().SubscribeMessage<EventPlayerDeath>(OnDeath);
         spaceBarSfx = GetComponent<AudioSource>();
     }
 
@@ -52,32 +52,33 @@ public class Player : MonoBehaviour, IDestructible {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void OnDisable() {
-        MessageHandler.Instance().UnsubscribeMessage<EventPlayerDeath>(OnDeath);
-    }
-
     void CheckInput() {
-        if (Input.GetKeyDown(KeyCode.Space) && playerStamina.IsNotEmpty) {
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && playerStamina.IsNotEmpty) {
             spaceBarSfx.Play();
         }
         
-        if (Input.GetKey(KeyCode.Space) && playerStamina.IsNotEmpty) {
+        if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.UpArrow)) && playerStamina.IsNotEmpty) {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Up));
             playerStamina.Decrease();
         } else {
             MessageHandler.Instance().SendMessage(new EventGravityChanged(Direction.Down));
         }
 
-        if (Input.GetKey(KeyCode.D)) {
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
             rb.AddForce(new Vector2(speed, 0) * Time.deltaTime);
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, maxVelocity * -1, maxVelocity), rb.velocity.y);
-        } else if (Input.GetKey(KeyCode.A)) {
+        } else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             rb.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, maxVelocity * -1, maxVelocity), rb.velocity.y);
         }
+        
+        if (Input.GetKey(KeyCode.F))
+        {
+            playerHealth.Increase();
+        }
     }
 
-    void OnDeath(EventPlayerDeath eventPlayerDeath) {
+    void OnDeath() {
         playerHasControl = false;
         toDeactivate.SetActive(false);
         staminaBar.SetActive(false);
@@ -98,6 +99,7 @@ public class Player : MonoBehaviour, IDestructible {
     }
 
     public void Die() {
+        OnDeath();
         MessageHandler.Instance().SendMessage(new EventPlayerDeath());
     }
 }

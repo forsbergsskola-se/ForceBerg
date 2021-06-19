@@ -1,6 +1,6 @@
 using System;
 using EventBroker;
-using EventBroker.Events;
+using Events;
 using UnityEngine;
 
 public class Flipable : MonoBehaviour
