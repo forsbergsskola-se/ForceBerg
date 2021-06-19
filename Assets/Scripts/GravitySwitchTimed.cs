@@ -1,6 +1,6 @@
 using System.Collections;
 using EventBroker;
-using EventBroker.Events;
+using Events;
 using UnityEngine;
 
 public class GravitySwitchTimed : MonoBehaviour

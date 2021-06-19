@@ -1,5 +1,5 @@
 using EventBroker;
-using EventBroker.Events;
+using Events;
 using UnityEngine;
 
 public class LevelColorChange : MonoBehaviour

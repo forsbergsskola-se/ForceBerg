@@ -1,11 +1,14 @@
-public class EventTriggerPlate
+namespace Events
 {
-    public int triggerKey;
-    public bool isActive;
-
-    public EventTriggerPlate(int triggerKey, bool active)
+    public class EventTriggerPlate
     {
-        this.triggerKey = triggerKey;
-        this.isActive = active;
+        public int triggerKey;
+        public bool isActive;
+
+        public EventTriggerPlate(int triggerKey, bool active)
+        {
+            this.triggerKey = triggerKey;
+            this.isActive = active;
+        }
     }
 }

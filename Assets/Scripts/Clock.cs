@@ -1,6 +1,5 @@
 using System.Collections;
 using EventBroker;
-using EventBroker.Events;
 using UnityEngine;
 
 [RequireComponent(typeof(TimeSlow))]
