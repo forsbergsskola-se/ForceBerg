@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using EventBroker;
 using EventBroker.Events;
@@ -14,12 +13,12 @@ public class Player : MonoBehaviour, IDestructible {
     [SerializeField] private GameObject destroyedCanPrefab;
     [SerializeField] private GameObject toDeactivate;
     [SerializeField] private GameObject staminaBar;
-    private Rigidbody2D rigidbody2D;
+    private Rigidbody2D rb;
     private bool playerHasControl = true;
     private AudioSource spaceBarSfx;
 
     private void Start() {
-        rigidbody2D = GetComponentInChildren<Rigidbody2D>();
+        rb = GetComponentInChildren<Rigidbody2D>();
         MessageHandler.Instance().SubscribeMessage<EventPlayerDeath>(OnDeath);
         spaceBarSfx = GetComponent<AudioSource>();
     }
@@ -70,11 +69,11 @@ public class Player : MonoBehaviour, IDestructible {
         }
 
         if (Input.GetKey(KeyCode.D)) {
-            rigidbody2D.AddForce(new Vector2(speed, 0) * Time.deltaTime);
-            rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, maxVelocity * -1, maxVelocity), rigidbody2D.velocity.y);
+            rb.AddForce(new Vector2(speed, 0) * Time.deltaTime);
+            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, maxVelocity * -1, maxVelocity), rb.velocity.y);
         } else if (Input.GetKey(KeyCode.A)) {
-            rigidbody2D.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
-            rigidbody2D.velocity = new Vector2(Mathf.Clamp(rigidbody2D.velocity.x, maxVelocity * -1, maxVelocity), rigidbody2D.velocity.y);
+            rb.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
+            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, maxVelocity * -1, maxVelocity), rb.velocity.y);
         }
     }
 
@@ -82,7 +81,7 @@ public class Player : MonoBehaviour, IDestructible {
         playerHasControl = false;
         toDeactivate.SetActive(false);
         staminaBar.SetActive(false);
-        rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         Instantiate(destroyedCanPrefab, this.transform.position, quaternion.identity);
         StartCoroutine(ShowMenuAfterSeconds(6f));
     }
