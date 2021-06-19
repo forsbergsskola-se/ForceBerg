@@ -307,7 +307,7 @@ MonoBehaviour:
   inflateChecks:
     serializedVersion: 2
     m_Bits: 1
-  distanceToCheck: 0.15
+  distanceToCheck: 0.02
   modelTransform: {fileID: 5646578840397888339}
   healthPerRegen: 50
   maxHealth: 100
