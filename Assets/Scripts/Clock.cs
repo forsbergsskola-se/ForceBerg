@@ -14,8 +14,7 @@ public class Clock : MonoBehaviour
     private TextMesh clockText;
     private TimeSlow timeSlow;
     private IEnumerator timer;
-    private bool gameIsPaused;
-    
+
     private void Awake()
     {
         clockHand = GetComponentInChildren<ClockHand>().gameObject;
@@ -23,12 +22,6 @@ public class Clock : MonoBehaviour
         timeSlow = GetComponent<TimeSlow>();
     }
 
-    private void OnEnable() =>
-        MessageHandler.Instance().SubscribeMessage<EventGamePaused>(OnGameIsPaused);
-
-    private void OnDisable() =>
-        MessageHandler.Instance().UnsubscribeMessage<EventGamePaused>(OnGameIsPaused);
-    
     public void StartSlowTimeIfNotInProgress()
     {
         if (timer != null) return;
@@ -36,17 +29,11 @@ public class Clock : MonoBehaviour
         timer = SlowTime();
         StartCoroutine(timer);
     }
-    
-    private void OnGameIsPaused(EventGamePaused eventGamePaused)
-        => gameIsPaused = eventGamePaused.IsPaused;
 
     private IEnumerator SlowTime()
     {
         while (IsTickingDown)
         {
-            while (gameIsPaused)
-                yield return null;
-            
             timeSlow.SlowTime();
             
             clockText.text = $"{Angle/6:00:00}";
