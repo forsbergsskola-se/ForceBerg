@@ -1,17 +1,23 @@
+using System.Collections.Generic;
 using EventBroker;
 using UnityEngine;
 
 public class Triggerplate : MonoBehaviour
 {
     public int triggerKey;
+    private List<Collider2D> triggering = new List<Collider2D>();
     
     private void OnTriggerEnter2D(Collider2D other)
     {
-        MessageHandler.Instance().SendMessage(new EventTriggerPlate(triggerKey, true));
+        triggering.Add(other);
+        if(triggering.Count == 1)
+            MessageHandler.Instance().SendMessage(new EventTriggerPlate(triggerKey, true));
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        MessageHandler.Instance().SendMessage(new EventTriggerPlate(triggerKey, false));
+        triggering.Remove(other);
+        if(triggering.Count == 0)
+            MessageHandler.Instance().SendMessage(new EventTriggerPlate(triggerKey, false));
     }
 }
