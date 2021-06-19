@@ -323,6 +323,7 @@ MonoBehaviour:
   maxAmount: 50
   decreasePerSecond: 10
   regenPerSecond: 6
+  regenDelay: 1
 --- !u!82 &6030405637002908577
 AudioSource:
   m_ObjectHideFlags: 0
