@@ -9,6 +9,11 @@ public class TimerUI : MonoBehaviour
     [SerializeField] private Text timerText;
     private void Awake()
     {
+        if (PlayerPrefs.GetInt("timerToggle", 0) == 0)
+        {
+            timerText.text = "";
+            return;
+        }
         MessageHandler.Instance().SubscribeMessage<TimerEvent>(UpdateTimer);
     }
 
