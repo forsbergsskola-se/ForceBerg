@@ -270,6 +270,7 @@ MonoBehaviour:
   destroyedCanPrefab: {fileID: 3911077501546396260, guid: 641144dc9ad767840b76558763a37e5e, type: 3}
   toDeactivate: {fileID: 5646578840397888341}
   staminaBar: {fileID: 1913660101}
+  playerHealth: {fileID: 1535822700604578099}
 --- !u!50 &1856284278003686728
 Rigidbody2D:
   serializedVersion: 4
@@ -303,6 +304,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a4960562ba4b5fb9041f8bba8c1fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inflateChecks:
+    serializedVersion: 2
+    m_Bits: 1
+  distanceToCheck: 0.15
   modelTransform: {fileID: 5646578840397888339}
   healthPerRegen: 50
   maxHealth: 100

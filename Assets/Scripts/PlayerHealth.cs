@@ -2,6 +2,8 @@
 
 public class PlayerHealth : MonoBehaviour
 {
+    public LayerMask inflateChecks;
+    public float distanceToCheck = 0.1f;
     public Transform modelTransform;
     public int healthPerRegen;
     public float maxHealth = 100;
@@ -35,12 +37,13 @@ public class PlayerHealth : MonoBehaviour
     {
         Health -= amount;
     }
-
-    private void Update()
+    
+    public void Increase()
     {
-        if (Input.GetKey(KeyCode.F))
-        {
-            Health += healthPerRegen * Time.deltaTime;
-        }
+        // var hit = Physics2D.Raycast(upTransform.position, Vector2.up, transform.lossyScale.y / 2 * distanceToCheck, inflateChecks);
+        // Debug.DrawRay(upTransform.position, Vector2.up * ((transform.lossyScale.y / 2) * distanceToCheck), Color.red, 10f);
+        // Debug.Log(hit.collider);
+        // if (hit.collider == null)
+        Health += healthPerRegen * Time.deltaTime;
     }
 }

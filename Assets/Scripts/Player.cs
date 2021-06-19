@@ -13,6 +13,7 @@ public class Player : MonoBehaviour, IDestructible {
     [SerializeField] private GameObject destroyedCanPrefab;
     [SerializeField] private GameObject toDeactivate;
     [SerializeField] private GameObject staminaBar;
+    [SerializeField] private PlayerHealth playerHealth;
     private Rigidbody2D rb;
     private bool playerHasControl = true;
     private AudioSource spaceBarSfx;
@@ -69,6 +70,11 @@ public class Player : MonoBehaviour, IDestructible {
         } else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
             rb.AddForce(new Vector2(-speed, 0) * Time.deltaTime);
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, maxVelocity * -1, maxVelocity), rb.velocity.y);
+        }
+        
+        if (Input.GetKey(KeyCode.F))
+        {
+            playerHealth.Increase();
         }
     }
 
