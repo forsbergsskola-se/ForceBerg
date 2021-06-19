@@ -2,7 +2,7 @@
 {
     public class TimerEvent
     {
-        private readonly float timePassed;
+        public readonly float timePassed;
 
         public TimerEvent(float timePassed)
         {
