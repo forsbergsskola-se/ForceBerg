@@ -1,4 +1,4 @@
-﻿namespace EventBroker.Events
+﻿namespace Events
 {
     public class EventGravityChanged
     {

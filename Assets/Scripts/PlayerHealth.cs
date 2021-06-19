@@ -40,10 +40,28 @@ public class PlayerHealth : MonoBehaviour
     
     public void Increase()
     {
-        // var hit = Physics2D.Raycast(upTransform.position, Vector2.up, transform.lossyScale.y / 2 * distanceToCheck, inflateChecks);
-        // Debug.DrawRay(upTransform.position, Vector2.up * ((transform.lossyScale.y / 2) * distanceToCheck), Color.red, 10f);
-        // Debug.Log(hit.collider);
-        // if (hit.collider == null)
-        Health += healthPerRegen * Time.deltaTime;
+        if (CanInflate())
+        {
+            Health += healthPerRegen * Time.deltaTime;
+        }
+    }
+
+    private bool CanInflate()
+    {
+        return CheckOneDirection(Vector2.up) || CheckOneDirection(Vector2.down);
+    }
+
+    private bool CheckOneDirection(Vector2 direction)
+    {
+        var position = modelTransform.position;
+        var lossyScale = modelTransform.lossyScale;
+        var hit = Physics2D.Raycast(position, direction, lossyScale.y + distanceToCheck, inflateChecks);
+        if (hit.collider != null)
+            return false;
+        hit = Physics2D.Raycast(new Vector2(position.x + lossyScale.x/2, position.y), direction, lossyScale.y + distanceToCheck, inflateChecks);
+        if (hit.collider != null)
+            return false;
+        hit = Physics2D.Raycast(new Vector2(position.x - lossyScale.x/2, position.y), direction, lossyScale.y + distanceToCheck, inflateChecks);
+        return hit.collider == null;
     }
 }

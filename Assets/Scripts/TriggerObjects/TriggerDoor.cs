@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using EventBroker;
+using Events;
 using UnityEngine;
 
 public class TriggerDoor : MonoBehaviour

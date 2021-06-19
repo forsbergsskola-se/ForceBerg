@@ -1,5 +1,4 @@
 using EventBroker;
-using EventBroker.Events;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
