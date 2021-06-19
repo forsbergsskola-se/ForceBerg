@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceScale: {x: 1.2, y: 0.8}
   bounceThreshold: 2.5
+  destroyedBallPrefab: {fileID: 3242711310009725492, guid: 3e8defe36b8d1c94aaeb74f6339fb2ba, type: 3}
 --- !u!1 &9044869369058354493
 GameObject:
   m_ObjectHideFlags: 0

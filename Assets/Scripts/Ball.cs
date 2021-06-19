@@ -1,18 +1,15 @@
 using System.Collections;
-using Traps;
 using UnityEngine;
 
-public class Ball : MonoBehaviour
+public class Ball : MonoBehaviour, IDestructible
 {
     [SerializeField] private Vector2 bounceScale;
     [SerializeField] private float bounceThreshold;
+    [SerializeField] private GameObject destroyedBallPrefab;
 
     private bool inProgress = false;
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.TryGetComponent<Trap>(out var trap)) {
-            Destroy(gameObject);
-        }
         if (transform.GetComponent<Rigidbody2D>().velocity.magnitude < bounceThreshold)
             return;
         if (inProgress) {
@@ -35,5 +32,12 @@ public class Ball : MonoBehaviour
             elapsed += Time.deltaTime * 2;
         }
         inProgress = false;
+    }
+
+    public void Die()
+    {
+        Destroy(gameObject);
+        var destroyedBall = Instantiate(destroyedBallPrefab, this.transform.position, Quaternion.identity);
+        Destroy(destroyedBall, 5f);
     }
 }
