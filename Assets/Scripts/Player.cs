@@ -19,7 +19,6 @@ public class Player : MonoBehaviour, IDestructible {
 
     private void Start() {
         rb = GetComponentInChildren<Rigidbody2D>();
-        MessageHandler.Instance().SubscribeMessage<EventPlayerDeath>(OnDeath);
         spaceBarSfx = GetComponent<AudioSource>();
     }
 
@@ -52,10 +51,6 @@ public class Player : MonoBehaviour, IDestructible {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    private void OnDisable() {
-        MessageHandler.Instance().UnsubscribeMessage<EventPlayerDeath>(OnDeath);
-    }
-
     void CheckInput() {
         if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && playerStamina.IsNotEmpty) {
             spaceBarSfx.Play();
@@ -77,7 +72,7 @@ public class Player : MonoBehaviour, IDestructible {
         }
     }
 
-    void OnDeath(EventPlayerDeath eventPlayerDeath) {
+    void OnDeath() {
         playerHasControl = false;
         toDeactivate.SetActive(false);
         staminaBar.SetActive(false);
@@ -98,6 +93,7 @@ public class Player : MonoBehaviour, IDestructible {
     }
 
     public void Die() {
+        OnDeath();
         MessageHandler.Instance().SendMessage(new EventPlayerDeath());
     }
 }
