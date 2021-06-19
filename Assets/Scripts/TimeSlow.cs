@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class TimeSlow : MonoBehaviour
 {
-    public float timeScale;
+    public float timeScale = 0.5f;
     private PlayerStamina stamina;
     
     void Start() {
-        stamina = GetComponent<PlayerStamina>();
+        stamina = FindObjectOfType<PlayerStamina>(); //todo if this is on the player, change to GetComponent
     }
 
     void Update() {
@@ -21,7 +21,7 @@ public class TimeSlow : MonoBehaviour
     }
 
     public void SlowTime() {
-        stamina.Decrease();
+        //stamina.Decrease();
         Time.timeScale = timeScale;
     }
 
