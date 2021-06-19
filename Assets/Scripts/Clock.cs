@@ -1,18 +1,18 @@
 using System.Collections;
+using EventBroker;
+using EventBroker.Events;
 using UnityEngine;
-using UnityEngine.Events;
 
 [RequireComponent(typeof(TimeSlow))]
 public class Clock : MonoBehaviour
 {
-    public UnityEvent onTimerStarted;
-    public UnityEvent onTimerFinished;
-    
     private GameObject clockHand;
     private TextMesh clockText;
     private TimeSlow timeSlow;
     private IEnumerator timer;
-
+    private bool gameIsPaused;
+    float Angle => Mathf.Abs(360 - clockHand.transform.localEulerAngles.z);
+    
     private void Awake()
     {
         clockHand = GetComponentInChildren<ClockHand>().gameObject;
@@ -20,30 +20,39 @@ public class Clock : MonoBehaviour
         timeSlow = GetComponent<TimeSlow>();
     }
 
-    public void Begin()
+    private void OnEnable() =>
+        MessageHandler.Instance().SubscribeMessage<EventGamePaused>(GameIsPaused);
+
+    private void OnDisable() =>
+        MessageHandler.Instance().UnsubscribeMessage<EventGamePaused>(GameIsPaused);
+    
+    public void StartSlowTimeIfNotInProgress()
     {
         if (timer != null) return;
 
-        timer = StartTimer();
+        timer = SlowTime();
         StartCoroutine(timer);
     }
-
-    private IEnumerator StartTimer()
+    
+    private void GameIsPaused(EventGamePaused eventGamePaused)
     {
-        onTimerStarted?.Invoke();
+        gameIsPaused = eventGamePaused.IsPaused;
         
-        var angle = Mathf.Abs(360 - clockHand.transform.localEulerAngles.z);
-        
-        while (angle >= 1f)
+    }
+
+    private IEnumerator SlowTime()
+    {
+        while (Angle >= 1f && Angle <= 350)
         {
+            while (gameIsPaused)
+                yield return null;
+            
             timeSlow.SlowTime();
-            angle = Mathf.Abs(360 - clockHand.transform.localEulerAngles.z);
-            if (angle > 350) break;
-            clockText.text = $"{angle/6:00:00}";
-            yield return null;
+            
+            clockText.text = $"{Angle/6:00:00}";
+            yield return new WaitForSeconds(0.1f);
         }
         timeSlow.NormalTime();
-        onTimerFinished?.Invoke();
         timer = null;
     }
 }

@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5139623973660565947, guid: d6dc7a419ddd1ad4d8759c773a94278c, type: 3}
+      propertyPath: onTimerStarted.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139623973660565947, guid: d6dc7a419ddd1ad4d8759c773a94278c, type: 3}
+      propertyPath: onTimerStarted.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5139623973660565947, guid: d6dc7a419ddd1ad4d8759c773a94278c, type: 3}
+      propertyPath: onTimerStarted.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7080843851380081829, guid: d6dc7a419ddd1ad4d8759c773a94278c, type: 3}
       propertyPath: m_Name
       value: Clock

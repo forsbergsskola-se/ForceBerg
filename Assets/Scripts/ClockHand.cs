@@ -8,5 +8,5 @@ public class ClockHand : MonoBehaviour
         clock = GetComponentInParent<Clock>();
 
     private void OnCollisionExit2D(Collision2D other)
-        => clock.Begin();
+        => clock.StartSlowTimeIfNotInProgress();
 }
