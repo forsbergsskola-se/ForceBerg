@@ -6,12 +6,15 @@ using UnityEngine;
 [RequireComponent(typeof(TimeSlow))]
 public class Clock : MonoBehaviour
 {
+    public bool IsTickingDown => Angle >= 1f && Angle <= 350;
+    public float Angle => Mathf.Abs(360 - clockHand.transform.localEulerAngles.z);
+    
+    
     private GameObject clockHand;
     private TextMesh clockText;
     private TimeSlow timeSlow;
     private IEnumerator timer;
     private bool gameIsPaused;
-    float Angle => Mathf.Abs(360 - clockHand.transform.localEulerAngles.z);
     
     private void Awake()
     {
@@ -21,10 +24,10 @@ public class Clock : MonoBehaviour
     }
 
     private void OnEnable() =>
-        MessageHandler.Instance().SubscribeMessage<EventGamePaused>(GameIsPaused);
+        MessageHandler.Instance().SubscribeMessage<EventGamePaused>(OnGameIsPaused);
 
     private void OnDisable() =>
-        MessageHandler.Instance().UnsubscribeMessage<EventGamePaused>(GameIsPaused);
+        MessageHandler.Instance().UnsubscribeMessage<EventGamePaused>(OnGameIsPaused);
     
     public void StartSlowTimeIfNotInProgress()
     {
@@ -34,15 +37,12 @@ public class Clock : MonoBehaviour
         StartCoroutine(timer);
     }
     
-    private void GameIsPaused(EventGamePaused eventGamePaused)
-    {
-        gameIsPaused = eventGamePaused.IsPaused;
-        
-    }
+    private void OnGameIsPaused(EventGamePaused eventGamePaused)
+        => gameIsPaused = eventGamePaused.IsPaused;
 
     private IEnumerator SlowTime()
     {
-        while (Angle >= 1f && Angle <= 350)
+        while (IsTickingDown)
         {
             while (gameIsPaused)
                 yield return null;
@@ -52,6 +52,8 @@ public class Clock : MonoBehaviour
             clockText.text = $"{Angle/6:00:00}";
             yield return new WaitForSeconds(0.1f);
         }
+
+        clockText.text = "--:--";
         timeSlow.NormalTime();
         timer = null;
     }

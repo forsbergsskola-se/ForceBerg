@@ -195,12 +195,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cce9dc4fe91a2d942af0110e20f66fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnTimerStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onTimerFinished:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &708543832
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,7 +331,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: -0.5}
-  m_ConnectedAnchor: {x: 0, y: 0.07000005}
+  m_ConnectedAnchor: {x: 0.15977931, y: -3.602415}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: -6
