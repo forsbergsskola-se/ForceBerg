@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinuousSpawner (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2a56513b899642ae32b351a889682, type: 3}
 --- !u!1001 &323319990
@@ -378,6 +382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ContinuousSpawner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2a56513b899642ae32b351a889682, type: 3}
 --- !u!1001 &388440935
@@ -438,6 +446,10 @@ PrefabInstance:
     - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
       propertyPath: m_Name
       value: ContinuousSpawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2a56513b899642ae32b351a889682, type: 3}
@@ -1748,6 +1760,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldTextWithBounds
       objectReference: {fileID: 0}
+    - target: {fileID: 4388781029750455128, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6177541239313135881, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_LocalPosition.y
       value: -5.55
@@ -1820,6 +1836,10 @@ PrefabInstance:
     - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
       propertyPath: m_Name
       value: ContinuousSpawner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2a56513b899642ae32b351a889682, type: 3}
@@ -17820,6 +17840,10 @@ PrefabInstance:
     - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
       propertyPath: m_Name
       value: ContinuousSpawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3877099209940844395, guid: f0c2a56513b899642ae32b351a889682, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0c2a56513b899642ae32b351a889682, type: 3}
