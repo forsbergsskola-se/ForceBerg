@@ -47,7 +47,9 @@ public class Player : MonoBehaviour, IDestructible {
             pauseMenu.Disable();
     }
 
-    void ResetGame() {
+    void ResetGame()
+    {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
