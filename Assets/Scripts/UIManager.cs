@@ -13,12 +13,6 @@ public class UIManager : MonoBehaviour
     // public static short currentScore;
     // [SerializeField] short _endScore;
 
-    
-    private void Start()
-    {
-        IfIsFirstTimePlaying();
-    }
-
     void Update() {
         // DisplayTime();
         // IfTimerIsZeroPlayerIsDefeated();
@@ -38,16 +32,7 @@ public class UIManager : MonoBehaviour
     //     if (currentScore - startScore >= _endScore)
     //         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     // }
-
-    public void IfIsFirstTimePlaying()
-    {
-        if (PlayerPrefs.GetInt("hasPlayedBefore") == 0)
-        {
-            PlayerPrefs.SetFloat("musicVolume", 0.5f);
-            PlayerPrefs.SetInt("hasPlayedBefore", 1);
-        }
-    }
-
+    
     public void FullScreenButton() {
         Screen.fullScreen = !Screen.fullScreen;
     }
@@ -67,14 +52,18 @@ public class UIManager : MonoBehaviour
     public void ExitApplicationButton() {
         #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
-        #else
+        #elif !UNITY_WEBGL
         Application.Quit();
 #endif
     }
 
     static void QuitButton() {
-        if (Input.GetKeyDown(KeyCode.Escape)) {
-            Application.Quit();
-        }
+         if (Input.GetKeyDown(KeyCode.Escape)) {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#elif !UNITY_WEBGL
+        Application.Quit();
+#endif
+         }
     }
 }
