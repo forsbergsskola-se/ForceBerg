@@ -824,7 +824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210, y: -6}
+  m_AnchoredPosition: {x: 210, y: -98}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &458476823
@@ -860,8 +860,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "CodeManu \"MAGIC SPACE\"\nJes\xFAs Lastra \"AUDIOPACK #005\"\nDizzy Crow
-    \"RETROSPACE\"\n"
+  m_Text: "CodeManu \"MAGIC SPACE\"\nEric Matyas \"STARLIGHT\"\nFoxSynergy \"HANG
+    IN THERE\"\nNIA MI \"SPACE MUSIC 1 AND 2\"\nTCARISLAND \"EMPTY SPACE\"\nAVGVSTA
+    \"SPACE STATION\"\nYD \"I SWEAR I SAW IT\"\nJes\xFAs Lastra \"AUDIOPACK #005\"\nDizzy
+    Crow \"RETROSPACE\"\n"
 --- !u!222 &458476824
 CanvasRenderer:
   m_ObjectHideFlags: 0
