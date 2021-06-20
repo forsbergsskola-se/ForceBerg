@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: 'Programmers:'
+  m_Text: 'PROGRAMMERS:'
 --- !u!222 &52565313
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -860,11 +860,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: "CodeManu \"MAGIC SPACE\"\nEric Matyas \"STARLIGHT\"\nFoxSynergy \"HANG
-    IN THERE\"\nNIA MI \"SPACE MUSIC 1 AND 2\"\nTCARISLAND \"EMPTY SPACE\"\nAVGVSTA
-    \"SPACE STATION\"\nYD \"I SWEAR I SAW IT\"\nAlex McCulloch \"PRO SENSORY\"\nSimon
-    Matuszewski \"Space forest\"\nTAUSDEI \"SPACE ICE-CREAM\"\nJes\xFAs Lastra \"AUDIOPACK
-    #005\"\nDizzy Crow \"RETROSPACE\"\n"
+  m_Text: "CodeManu \"Magic Space\"\nEric Matyas \"Starlight\"\nFoxSynergy \"Hang
+    in there\"\nNia Mi \"Space Music 1 & 2\"\nTcarisland \"Empty Space\"\nAVGVSTA
+    \"Space Station\"\nYD \"I swear I saw it\"\nAlex McCulloch \"Pro Sensory\"\nSimon
+    Matuszewski \"Space forest\"\nTausdei \"Space Ice-Cream\"\nJes\xFAs Lastra \"AUDIOPACK
+    #005\"\nDizzy Crow \"RetroSpace\"\n"
 --- !u!222 &458476824
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1436,7 +1436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1.5
-  m_Text: FREDRIK "XODUZ" WALLANDER
+  m_Text: Fredrik "Xoduz" Wallander
 --- !u!222 &704778019
 CanvasRenderer:
   m_ObjectHideFlags: 0
