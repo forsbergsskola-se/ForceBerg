@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level06_Sorting.unity
     guid: d95eaab6a1f39ff40a5533ec064965e4
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Level07_UnstablePlatforms.unity
     guid: 32dfa9ad69ed0584eb57a395fe12485e
   - enabled: 1
@@ -47,6 +47,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level97_EasyPeasy.unity
     guid: 2a784f778a08a492d9ea2aff7e6ef791
+  - enabled: 1
+    path: Assets/Scenes/Factory.unity
+    guid: a76998943b573c5478cb5c22280bcf8b
+  - enabled: 1
+    path: Assets/Scenes/FlapFlap.unity
+    guid: 9001992f29bddee49a0ec4e184ecd2ab
+  - enabled: 1
+    path: Assets/Scenes/UncannyValley.unity
+    guid: 5e68062d041b33f4b96f97b18bb3d58f
   - enabled: 1
     path: Assets/Scenes/Level98_End.unity
     guid: 6f8165f962214364bbe2635b31709ad2
