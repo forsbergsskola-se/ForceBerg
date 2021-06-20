@@ -248,11 +248,15 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 8a27ad632d409e44eb0ed2fd12f11446, type: 3}
   - {fileID: 102900000, guid: 12e873cbc2077144a9243c16e7938c2f, type: 3}
   - {fileID: 102900000, guid: c6e6839c52c6bcc4ca6542322d256c28, type: 3}
+  - {fileID: 102900000, guid: 9001992f29bddee49a0ec4e184ecd2ab, type: 3}
   - {fileID: 102900000, guid: d95eaab6a1f39ff40a5533ec064965e4, type: 3}
+  - {fileID: 102900000, guid: 32dfa9ad69ed0584eb57a395fe12485e, type: 3}
   - {fileID: 102900000, guid: 8d401033764019446bf09a4508677533, type: 3}
   - {fileID: 102900000, guid: 983183891bf80544b8a15f45000a97c9, type: 3}
+  - {fileID: 102900000, guid: a76998943b573c5478cb5c22280bcf8b, type: 3}
   - {fileID: 102900000, guid: 5c2a1b2b71614db4da01cf7d3ecf3279, type: 3}
   - {fileID: 102900000, guid: 2a784f778a08a492d9ea2aff7e6ef791, type: 3}
+  - {fileID: 102900000, guid: 5e68062d041b33f4b96f97b18bb3d58f, type: 3}
   - {fileID: 102900000, guid: 6f8165f962214364bbe2635b31709ad2, type: 3}
   scenes:
   - Level00_Tutorial01
@@ -262,11 +266,15 @@ MonoBehaviour:
   - Level03_PressurePlate
   - Level04_Conveyors
   - Level05_TickTock
+  - FlapFlap
   - Level06_Sorting
+  - Level07_UnstablePlatforms
   - Level08_Level_9000
   - Level09_HurryUp
+  - Factory
   - Level10_Escort
   - Level97_EasyPeasy
+  - UncannyValley
   - Level98_End
 --- !u!114 &35105358
 MonoBehaviour:
@@ -755,24 +763,30 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 8a27ad632d409e44eb0ed2fd12f11446, type: 3}
   - {fileID: 102900000, guid: 12e873cbc2077144a9243c16e7938c2f, type: 3}
   - {fileID: 102900000, guid: c6e6839c52c6bcc4ca6542322d256c28, type: 3}
+  - {fileID: 102900000, guid: 9001992f29bddee49a0ec4e184ecd2ab, type: 3}
   - {fileID: 102900000, guid: d95eaab6a1f39ff40a5533ec064965e4, type: 3}
   - {fileID: 102900000, guid: 32dfa9ad69ed0584eb57a395fe12485e, type: 3}
   - {fileID: 102900000, guid: 8d401033764019446bf09a4508677533, type: 3}
   - {fileID: 102900000, guid: 983183891bf80544b8a15f45000a97c9, type: 3}
+  - {fileID: 102900000, guid: a76998943b573c5478cb5c22280bcf8b, type: 3}
   - {fileID: 102900000, guid: 5c2a1b2b71614db4da01cf7d3ecf3279, type: 3}
   - {fileID: 102900000, guid: 2a784f778a08a492d9ea2aff7e6ef791, type: 3}
+  - {fileID: 102900000, guid: 5e68062d041b33f4b96f97b18bb3d58f, type: 3}
   - {fileID: 102900000, guid: 6f8165f962214364bbe2635b31709ad2, type: 3}
   scenes:
   - Level02_Saws
   - Level03_PressurePlate
   - Level04_Conveyors
   - Level05_TickTock
+  - FlapFlap
   - Level06_Sorting
   - Level07_UnstablePlatforms
   - Level08_Level_9000
   - Level09_HurryUp
+  - Factory
   - Level10_Escort
   - Level97_EasyPeasy
+  - UncannyValley
   - Level98_End
 --- !u!114 &192626548
 MonoBehaviour:
