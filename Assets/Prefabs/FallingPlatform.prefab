@@ -396,7 +396,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.0206757, y: 1}
+  m_Size: {x: 5, y: 1}
   m_EdgeRadius: 0
 --- !u!50 &7694726876650032000
 Rigidbody2D:
@@ -432,6 +432,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyTime: 1.5
+  bricksParentObject: {fileID: 4159460917783705675}
+  onDestroyPrefabs:
+  - {fileID: 1993672813579089827, guid: 2b6017ed1da45ed4cb127be4b8fcd79c, type: 3}
+  - {fileID: 4687913070054910595, guid: 3ab1ff24340268c47b4d0787481d8a27, type: 3}
 --- !u!82 &7242383287365679957
 AudioSource:
   m_ObjectHideFlags: 0
