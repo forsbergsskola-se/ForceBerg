@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level05_TickTock.unity
     guid: c6e6839c52c6bcc4ca6542322d256c28
   - enabled: 1
+    path: Assets/Scenes/FlapFlap.unity
+    guid: 9001992f29bddee49a0ec4e184ecd2ab
+  - enabled: 1
     path: Assets/Scenes/Level06_Sorting.unity
     guid: d95eaab6a1f39ff40a5533ec064965e4
   - enabled: 1
@@ -42,17 +45,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level09_HurryUp.unity
     guid: 983183891bf80544b8a15f45000a97c9
   - enabled: 1
+    path: Assets/Scenes/Factory.unity
+    guid: a76998943b573c5478cb5c22280bcf8b
+  - enabled: 1
     path: Assets/Scenes/Level10_Escort.unity
     guid: 5c2a1b2b71614db4da01cf7d3ecf3279
   - enabled: 1
     path: Assets/Scenes/Level97_EasyPeasy.unity
     guid: 2a784f778a08a492d9ea2aff7e6ef791
-  - enabled: 1
-    path: Assets/Scenes/Factory.unity
-    guid: a76998943b573c5478cb5c22280bcf8b
-  - enabled: 1
-    path: Assets/Scenes/FlapFlap.unity
-    guid: 9001992f29bddee49a0ec4e184ecd2ab
   - enabled: 1
     path: Assets/Scenes/UncannyValley.unity
     guid: 5e68062d041b33f4b96f97b18bb3d58f
