@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class UIManager : MonoBehaviour {
+public class UIManager : MonoBehaviour
+{
     // public Text timeText;
     // [SerializeField] float startTime;
     //
@@ -10,6 +12,12 @@ public class UIManager : MonoBehaviour {
     // public short startScore;
     // public static short currentScore;
     // [SerializeField] short _endScore;
+
+    
+    private void Start()
+    {
+        IfIsFirstTimePlaying();
+    }
 
     void Update() {
         // DisplayTime();
@@ -30,6 +38,15 @@ public class UIManager : MonoBehaviour {
     //     if (currentScore - startScore >= _endScore)
     //         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     // }
+
+    public void IfIsFirstTimePlaying()
+    {
+        if (PlayerPrefs.GetInt("hasPlayedBefore") == 0)
+        {
+            PlayerPrefs.SetFloat("musicVolume", 0.5f);
+            PlayerPrefs.SetInt("hasPlayedBefore", 1);
+        }
+    }
 
     public void FullScreenButton() {
         Screen.fullScreen = !Screen.fullScreen;
