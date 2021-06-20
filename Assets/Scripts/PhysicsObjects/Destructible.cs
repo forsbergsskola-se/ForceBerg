@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 
-public class Destructible : MonoBehaviour, IDestructible
+namespace PhysicsObjects
 {
-    public GameObject destroyedPrefab;
-    public float destroyDelay = 5f;
-
-    public void Die()
+    public class Destructible : MonoBehaviour, IDestructible
     {
-       Destroy(gameObject);
-       if (destroyedPrefab == null)
-           return;
-       var destroyedObject = Instantiate(destroyedPrefab, this.transform.position, Quaternion.identity);
-       Destroy(destroyedObject, destroyDelay);
-    } 
+        public GameObject destroyedPrefab;
+        public float destroyDelay = 5f;
+
+        public void Die()
+        {
+            Destroy(gameObject);
+            if (destroyedPrefab == null)
+                return;
+            var destroyedObject = Instantiate(destroyedPrefab, this.transform.position, Quaternion.identity);
+            Destroy(destroyedObject, destroyDelay);
+        } 
+    }
 }

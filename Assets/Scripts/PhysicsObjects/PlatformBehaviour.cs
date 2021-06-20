@@ -1,4 +1,7 @@
-﻿public enum PlatformBehaviour
+﻿namespace PhysicsObjects
 {
-    OnContact, OnLeaving
+    public enum PlatformBehaviour
+    {
+        OnContact, OnLeaving
+    }
 }

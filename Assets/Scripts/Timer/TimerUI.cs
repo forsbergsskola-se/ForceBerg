@@ -3,27 +3,30 @@ using Events;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TimerUI : MonoBehaviour
+namespace Timer
 {
-    [SerializeField] private Text timerText;
-    private void Awake()
+    public class TimerUI : MonoBehaviour
     {
-        if (PlayerPrefs.GetInt("timerToggle", 0) == 0)
+        [SerializeField] private Text timerText;
+        private void Awake()
         {
-            timerText.text = "";
-            return;
+            if (PlayerPrefs.GetInt("timerToggle", 0) == 0)
+            {
+                timerText.text = "";
+                return;
+            }
+            MessageHandler.Instance().SubscribeMessage<TimerEvent>(UpdateTimer);
         }
-        MessageHandler.Instance().SubscribeMessage<TimerEvent>(UpdateTimer);
-    }
 
-    private void UpdateTimer(TimerEvent obj)
-    {
-        var timeSpan = TimeSpan.FromSeconds(obj.timePassed);
-        timerText.text = timeSpan.ToString(@"mm\:ss\:ff");
-    }
+        private void UpdateTimer(TimerEvent obj)
+        {
+            var timeSpan = TimeSpan.FromSeconds(obj.timePassed);
+            timerText.text = timeSpan.ToString(@"mm\:ss\:ff");
+        }
     
-    private void OnDestroy()
-    {
-        MessageHandler.Instance().UnsubscribeMessage<TimerEvent>(UpdateTimer);
+        private void OnDestroy()
+        {
+            MessageHandler.Instance().UnsubscribeMessage<TimerEvent>(UpdateTimer);
+        }
     }
 }

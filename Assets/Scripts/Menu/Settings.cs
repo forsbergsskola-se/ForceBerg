@@ -2,50 +2,53 @@ using Events;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Settings : MonoBehaviour
+namespace Menu
 {
-    public Toggle timerToggle;
-    public Slider musicSlider;
-
-    private bool TimerToggle
+    public class Settings : MonoBehaviour
     {
-        get
+        public Toggle timerToggle;
+        public Slider musicSlider;
+
+        private bool TimerToggle
         {
-            var asInt = PlayerPrefs.GetInt("timerToggle", 0);
-            return asInt != 0;
+            get
+            {
+                var asInt = PlayerPrefs.GetInt("timerToggle", 0);
+                return asInt != 0;
+            }
+            set
+            {
+                var asInt = value ? 1 : 0;
+                PlayerPrefs.SetInt("timerToggle", asInt);
+            }
         }
-        set
+
+        private float MusicVolume
         {
-            var asInt = value ? 1 : 0;
-            PlayerPrefs.SetInt("timerToggle", asInt);
+            get => PlayerPrefs.GetFloat("musicVolume", 0.5f);
+            set
+            {
+                PlayerPrefs.SetFloat("musicVolume", value);
+                MessageHandler.Instance().SendMessage(new MusicVolumeEvent(value));
+            } 
         }
-    }
 
-    private float MusicVolume
-    {
-        get => PlayerPrefs.GetFloat("musicVolume", 0.5f);
-        set
+        private void Awake()
         {
-            PlayerPrefs.SetFloat("musicVolume", value);
-            MessageHandler.Instance().SendMessage(new MusicVolumeEvent(value));
-        } 
-    }
+            timerToggle.isOn = TimerToggle;
+            timerToggle.onValueChanged.AddListener(TimerToggleOnChange);
+            musicSlider.value = MusicVolume;
+            musicSlider.onValueChanged.AddListener(MusicVolumeOnChange);
+        }
 
-    private void Awake()
-    {
-        timerToggle.isOn = TimerToggle;
-        timerToggle.onValueChanged.AddListener(TimerToggleOnChange);
-        musicSlider.value = MusicVolume;
-        musicSlider.onValueChanged.AddListener(MusicVolumeOnChange);
-    }
+        private void MusicVolumeOnChange(float value)
+        {
+            MusicVolume = value;
+        }
 
-    private void MusicVolumeOnChange(float value)
-    {
-        MusicVolume = value;
-    }
-
-    private void TimerToggleOnChange(bool value)
-    {
-        TimerToggle = value;
+        private void TimerToggleOnChange(bool value)
+        {
+            TimerToggle = value;
+        }
     }
 }

@@ -1,3 +1,4 @@
+using PhysicsObjects;
 using UnityEngine;
 
 namespace Traps

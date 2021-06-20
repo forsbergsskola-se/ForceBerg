@@ -1,24 +1,27 @@
 using UnityEngine;
 
-public class ContinuousSpawner : MonoBehaviour
+namespace Spawners
 {
-    [SerializeField] private GameObject spawnObject;
-    [SerializeField] private int quantity;
-    [SerializeField] private float repeat = 1f;
-    [SerializeField] private float delayBeforeStart;
-
-    private int counter = 0;
-
-    private void Start()
+    public class ContinuousSpawner : MonoBehaviour
     {
-        InvokeRepeating(nameof(Spawn), delayBeforeStart, repeat);
-    }
+        [SerializeField] private GameObject spawnObject;
+        [SerializeField] private int quantity;
+        [SerializeField] private float repeat = 1f;
+        [SerializeField] private float delayBeforeStart;
 
-    void Spawn()
-    {
-        Instantiate(spawnObject, transform);
-        counter++;
-        if(counter >= quantity)
-            CancelInvoke(nameof(Spawn));
+        private int counter = 0;
+
+        private void Start()
+        {
+            InvokeRepeating(nameof(Spawn), delayBeforeStart, repeat);
+        }
+
+        void Spawn()
+        {
+            Instantiate(spawnObject, transform);
+            counter++;
+            if(counter >= quantity)
+                CancelInvoke(nameof(Spawn));
+        }
     }
 }

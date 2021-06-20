@@ -1,4 +1,6 @@
-﻿namespace Events
+﻿using Player;
+
+namespace Events
 {
     public class EventGravityChanged
     {

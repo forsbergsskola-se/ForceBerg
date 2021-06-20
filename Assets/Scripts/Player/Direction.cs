@@ -1,7 +1,10 @@
-﻿public enum Direction
+﻿namespace Player
 {
-    Up,
-    Left,
-    Right,
-    Down
+    public enum Direction
+    {
+        Up,
+        Left,
+        Right,
+        Down
+    }
 }

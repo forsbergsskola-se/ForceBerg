@@ -1,22 +1,25 @@
 using Player;
 using UnityEngine;
 
-public class SquishObject : MonoBehaviour
+namespace PhysicsObjects
 {
-    public int squishAmount = 10;
-    
-    private void OnCollisionEnter2D(Collision2D other)
+    public class SquishObject : MonoBehaviour
     {
-        if (other.gameObject.TryGetComponent<PlayerHealth>(out var health))
+        public int squishAmount = 10;
+    
+        private void OnCollisionEnter2D(Collision2D other)
         {
-            var rb2d = GetComponent<Rigidbody2D>();
-            var hitAmount = rb2d.velocity.magnitude;
-            var playerVelocity = other.rigidbody.velocity.magnitude;
-            var squishSfx = GetComponent<AudioSource>();
-            if (hitAmount < playerVelocity)
-                return;
-            health.TakeDamage(squishAmount);
-            squishSfx.Play();
+            if (other.gameObject.TryGetComponent<PlayerHealth>(out var health))
+            {
+                var rb2d = GetComponent<Rigidbody2D>();
+                var hitAmount = rb2d.velocity.magnitude;
+                var playerVelocity = other.rigidbody.velocity.magnitude;
+                var squishSfx = GetComponent<AudioSource>();
+                if (hitAmount < playerVelocity)
+                    return;
+                health.TakeDamage(squishAmount);
+                squishSfx.Play();
+            }
         }
     }
 }

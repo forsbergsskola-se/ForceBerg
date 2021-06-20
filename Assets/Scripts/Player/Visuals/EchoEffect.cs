@@ -1,7 +1,7 @@
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace Player
+namespace Player.Visuals
 {
     public class EchoEffect : MonoBehaviour
     {

@@ -1,4 +1,7 @@
-public interface IDestructible
+namespace PhysicsObjects
 {
-    public void Die();
+    public interface IDestructible
+    {
+        public void Die();
+    }
 }
