@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1646029589123874180}
   - component: {fileID: 3825738870085339359}
   - component: {fileID: 2508917517838826252}
+  - component: {fileID: 148082754268881270}
   m_Layer: 0
   m_Name: block_black
   m_TagString: Untagged
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,3 +111,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &148082754268881270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6010757321777907774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ab10bcd7584ca78507664837724697, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedPrefab: {fileID: 2976755467667907204, guid: 70af0b49cf16d724bb927ed0c2017a9b, type: 3}

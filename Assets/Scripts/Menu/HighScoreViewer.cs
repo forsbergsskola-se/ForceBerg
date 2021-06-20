@@ -21,7 +21,7 @@ namespace Menu
                 var savedTime = PlayerPrefs.GetFloat(sceneAsset, 0);
                 var timeSpan = TimeSpan.FromSeconds(savedTime);
                 var timeText = savedTime != 0 ? $"{timeSpan:mm\\:ss\\:ff}" : "N/A";
-                highScoreText.text = $"{sceneAsset.Substring(8)}:\n \n" +
+                highScoreText.text = $"{sceneAsset.Substring(8)}:\n" +
                                      $"{timeText}";
             }
         }

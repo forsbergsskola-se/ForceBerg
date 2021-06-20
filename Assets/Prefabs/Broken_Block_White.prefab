@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2499641626968531274}
   - component: {fileID: 7694431802446126586}
-  - component: {fileID: 4307053678574107587}
   - component: {fileID: 1294617750532522741}
   - component: {fileID: 3634313925957215279}
+  - component: {fileID: 3463339556956484408}
   m_Layer: 0
   m_Name: Block_White_Part_3
   m_TagString: Untagged
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4307053678574107587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 162172252929914528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27436cd06af42c843831736f3c206537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1294617750532522741
 Rigidbody2D:
   serializedVersion: 4
@@ -150,6 +138,18 @@ PolygonCollider2D:
       - {x: 0.16, y: -0.285}
       - {x: 0.24, y: -0.21499999}
       - {x: 0.24, y: 0.285}
+--- !u!114 &3463339556956484408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 162172252929914528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39b2803fd6f4fcfb730fc159d69acf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1456475532600978550
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,9 +196,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1298697504596134940}
   - component: {fileID: 789449194718542903}
-  - component: {fileID: 2189189480896183431}
   - component: {fileID: 5004453900121469907}
   - component: {fileID: 2412889064669835261}
+  - component: {fileID: 2100044811984263882}
   m_Layer: 0
   m_Name: Block_White_Part_1
   m_TagString: Untagged
@@ -272,18 +272,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2189189480896183431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103167073522496896}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27436cd06af42c843831736f3c206537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &5004453900121469907
 Rigidbody2D:
   serializedVersion: 4
@@ -337,6 +325,18 @@ PolygonCollider2D:
       - {x: 0.275, y: -0.175}
       - {x: 0.275, y: 0.24499999}
       - {x: 0.255, y: 0.255}
+--- !u!114 &2100044811984263882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103167073522496896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39b2803fd6f4fcfb730fc159d69acf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2198223595304417683
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,9 +347,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2514592294745097512}
   - component: {fileID: 1216123494634927758}
-  - component: {fileID: 815152731696601936}
   - component: {fileID: 2759646055694984694}
   - component: {fileID: 7805310623552971753}
+  - component: {fileID: 8974486822512250477}
   m_Layer: 0
   m_Name: Block_White_Part_5
   m_TagString: Untagged
@@ -423,18 +423,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &815152731696601936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2198223595304417683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27436cd06af42c843831736f3c206537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2759646055694984694
 Rigidbody2D:
   serializedVersion: 4
@@ -491,6 +479,18 @@ PolygonCollider2D:
       - {x: 0.315, y: -0.31}
       - {x: 0.315, y: 0.31}
       - {x: 0.305, y: 0.31}
+--- !u!114 &8974486822512250477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2198223595304417683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39b2803fd6f4fcfb730fc159d69acf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2314486705602353886
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,9 +501,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2853876246314773594}
   - component: {fileID: 244406532145051882}
-  - component: {fileID: 5630755218296091947}
   - component: {fileID: 1910067141469429091}
   - component: {fileID: 1519938868597201341}
+  - component: {fileID: 5495760214220237794}
   m_Layer: 0
   m_Name: Block_White_Part_2
   m_TagString: Untagged
@@ -577,18 +577,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5630755218296091947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2314486705602353886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27436cd06af42c843831736f3c206537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &1910067141469429091
 Rigidbody2D:
   serializedVersion: 4
@@ -642,6 +630,18 @@ PolygonCollider2D:
       - {x: 0.295, y: -0.225}
       - {x: 0.295, y: 0.21499999}
       - {x: 0.285, y: 0.225}
+--- !u!114 &5495760214220237794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314486705602353886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39b2803fd6f4fcfb730fc159d69acf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2388380958201205844
 GameObject:
   m_ObjectHideFlags: 0
@@ -5516,9 +5516,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2295808500941949026}
   - component: {fileID: 2874333149411190189}
-  - component: {fileID: 4405845450089205321}
   - component: {fileID: 4753974300356747823}
   - component: {fileID: 6633005889351996088}
+  - component: {fileID: 6213607212966631048}
   m_Layer: 0
   m_Name: Block_White_Part_4
   m_TagString: Untagged
@@ -5592,18 +5592,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4405845450089205321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786745024102198087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27436cd06af42c843831736f3c206537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &4753974300356747823
 Rigidbody2D:
   serializedVersion: 4
@@ -5661,3 +5649,15 @@ PolygonCollider2D:
       - {x: 0.11, y: -0.235}
       - {x: 0.22999999, y: -0.095}
       - {x: 0.22999999, y: 0.155}
+--- !u!114 &6213607212966631048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3786745024102198087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f39b2803fd6f4fcfb730fc159d69acf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

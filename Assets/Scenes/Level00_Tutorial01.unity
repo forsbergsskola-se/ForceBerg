@@ -212,7 +212,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 12800000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: 'P / Esc For
@@ -222,7 +222,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 2100000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1001 &204078501
@@ -500,7 +500,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 12800000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: 'Falling objects
@@ -510,7 +510,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 2100000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1001 &1162786509
@@ -571,7 +571,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 12800000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: "A / <- and \nD / -> to move"
@@ -579,7 +579,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 2100000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1 &1564082354 stripped
@@ -25058,7 +25058,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Font
       value: 
-      objectReference: {fileID: 12800000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 12800000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
       value: "Holding \nSpace / Up Arrow\nInverses Gravity"
@@ -25066,7 +25066,7 @@ PrefabInstance:
     - target: {fileID: 7523406450770303477, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d535e81808ab04b63a398a5a2394b950, type: 3}
+      objectReference: {fileID: 2100000, guid: f33a745ca0ff3485e925a9869f9854fc, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
 --- !u!1001 &4499119606531343952
