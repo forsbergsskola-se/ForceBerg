@@ -1,3 +1,5 @@
+using EventBroker;
+using Events;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -23,7 +25,11 @@ public class Settings : MonoBehaviour
     private float MusicVolume
     {
         get => PlayerPrefs.GetFloat("musicVolume", 0.5f);
-        set => PlayerPrefs.SetFloat("musicVolume", value);
+        set
+        {
+            PlayerPrefs.SetFloat("musicVolume", value);
+            MessageHandler.Instance().SendMessage(new MusicVolumeEvent(value));
+        } 
     }
 
     private void Awake()
