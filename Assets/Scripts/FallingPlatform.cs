@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ public class FallingPlatform : MonoBehaviour, IDestructible
         rb = GetComponent<Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Static;
         fallingPlatformSfx = GetComponent<AudioSource>();
+        GetComponent<CompositeCollider2D>().GenerateGeometry();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -38,10 +40,23 @@ public class FallingPlatform : MonoBehaviour, IDestructible
     private void AddPhysics(Transform child)
     {
         child.AddComponent<Rigidbody2D>();
-        child.AddComponent<BoxCollider2D>();
         child.parent = null;
         var destructible = child.AddComponent<Destructible>();
         destructible.destroyedPrefab = onDestroyPrefab;
         destructible.destroyDelay = 3f;
+    }
+
+    private void OnValidate()
+    {
+        GenerateCollider();
+    }
+
+    [ContextMenu("GenerateCompositeCollider")]
+    public void GenerateCollider()
+    {
+        if (TryGetComponent<CompositeCollider2D>(out var compositeCollider2D))
+        {
+            compositeCollider2D.GenerateGeometry();
+        }
     }
 }
