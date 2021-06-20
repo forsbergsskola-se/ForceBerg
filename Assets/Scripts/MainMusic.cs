@@ -7,6 +7,6 @@ public class MainMusic : MonoBehaviour
 
     private void Awake()
     {
-        audioSource.volume = PlayerPrefs.GetFloat("musicVolume");
+        audioSource.volume = PlayerPrefs.GetFloat("musicVolume", 0.5f);
     }
 }
