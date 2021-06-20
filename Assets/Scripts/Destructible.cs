@@ -2,7 +2,8 @@
 
 public class Destructible : MonoBehaviour, IDestructible
 {
-    [SerializeField] private GameObject destroyedPrefab;
+    public GameObject destroyedPrefab;
+    public float destroyDelay = 5f;
 
     public void Die()
     {
@@ -10,6 +11,6 @@ public class Destructible : MonoBehaviour, IDestructible
        if (destroyedPrefab == null)
            return;
        var destroyedObject = Instantiate(destroyedPrefab, this.transform.position, Quaternion.identity);
-       Destroy(destroyedObject, 5f);
+       Destroy(destroyedObject, destroyDelay);
     } 
 }
