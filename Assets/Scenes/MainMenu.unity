@@ -266,15 +266,15 @@ MonoBehaviour:
   - Level03_PressurePlate
   - Level04_Conveyors
   - Level05_TickTock
-  - FlapFlap
+  - Level00_FlapFlap
   - Level06_Sorting
   - Level07_UnstablePlatforms
   - Level08_Level_9000
   - Level09_HurryUp
-  - Factory
+  - Level00_Factory
   - Level10_Escort
   - Level97_EasyPeasy
-  - UncannyValley
+  - Level_00UncannyValley
   - Level98_End
 --- !u!114 &35105358
 MonoBehaviour:
@@ -759,6 +759,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonPrefab: {fileID: 2271387517604271861, guid: f8af8033bee2d51498e3e09d54d111b5, type: 3}
   sceneAssets:
+  - {fileID: 102900000, guid: 51c8ac335af463b48ba68e8998b6043f, type: 3}
+  - {fileID: 102900000, guid: 995cad339376d3a4585c164d73a079b7, type: 3}
+  - {fileID: 102900000, guid: 7023258804d16184da31791abd033e92, type: 3}
   - {fileID: 102900000, guid: bb5d5671777c7cf438b8970d53564990, type: 3}
   - {fileID: 102900000, guid: 8a27ad632d409e44eb0ed2fd12f11446, type: 3}
   - {fileID: 102900000, guid: 12e873cbc2077144a9243c16e7938c2f, type: 3}
@@ -774,19 +777,22 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 5e68062d041b33f4b96f97b18bb3d58f, type: 3}
   - {fileID: 102900000, guid: 6f8165f962214364bbe2635b31709ad2, type: 3}
   scenes:
+  - Level00_Tutorial01
+  - Level01_Tutorial02
+  - Level01_Tutorial03
   - Level02_Saws
   - Level03_PressurePlate
   - Level04_Conveyors
   - Level05_TickTock
-  - FlapFlap
+  - Level00_FlapFlap
   - Level06_Sorting
   - Level07_UnstablePlatforms
   - Level08_Level_9000
   - Level09_HurryUp
-  - Factory
+  - Level00_Factory
   - Level10_Escort
   - Level97_EasyPeasy
-  - UncannyValley
+  - Level_00UncannyValley
   - Level98_End
 --- !u!114 &192626548
 MonoBehaviour:
