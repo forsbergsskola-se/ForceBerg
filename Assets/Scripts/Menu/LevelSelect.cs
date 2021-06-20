@@ -26,7 +26,11 @@ namespace Menu
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            scenes = sceneAssets.Select(asset => asset.name).ToArray();
+            if (scenes != sceneAssets.Select(asset => asset.name).ToArray())
+            {
+                scenes = sceneAssets.Select(asset => asset.name).ToArray();
+                UnityEditor.EditorUtility.SetDirty(this);
+            }
         }
 #endif
     }

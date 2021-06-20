@@ -15,49 +15,49 @@ EditorBuildSettings:
     path: Assets/Scenes/Level01_Tutorial02.unity
     guid: 995cad339376d3a4585c164d73a079b7
   - enabled: 1
-    path: Assets/Scenes/Level01_Tutorial03.unity
+    path: Assets/Scenes/Level02_Tutorial03.unity
     guid: 7023258804d16184da31791abd033e92
   - enabled: 1
-    path: Assets/Scenes/Level02_Saws.unity
+    path: Assets/Scenes/Level03_Saws.unity
     guid: bb5d5671777c7cf438b8970d53564990
   - enabled: 1
-    path: Assets/Scenes/Level03_PressurePlate.unity
+    path: Assets/Scenes/Level04_PressurePlate.unity
     guid: 8a27ad632d409e44eb0ed2fd12f11446
   - enabled: 1
-    path: Assets/Scenes/Level04_Conveyors.unity
+    path: Assets/Scenes/Level05_Conveyors.unity
     guid: 12e873cbc2077144a9243c16e7938c2f
   - enabled: 1
-    path: Assets/Scenes/Level05_TickTock.unity
+    path: Assets/Scenes/Level06_TickTock.unity
     guid: c6e6839c52c6bcc4ca6542322d256c28
   - enabled: 1
-    path: Assets/Scenes/Level00_FlapFlap.unity
+    path: Assets/Scenes/Level07_FlapFlap.unity
     guid: 9001992f29bddee49a0ec4e184ecd2ab
   - enabled: 1
-    path: Assets/Scenes/Level06_Sorting.unity
+    path: Assets/Scenes/Level08_Sorting.unity
     guid: d95eaab6a1f39ff40a5533ec064965e4
   - enabled: 1
-    path: Assets/Scenes/Level07_UnstablePlatforms.unity
+    path: Assets/Scenes/Level09_UnstablePlatforms.unity
     guid: 32dfa9ad69ed0584eb57a395fe12485e
   - enabled: 1
-    path: Assets/Scenes/Level08_Level_9000.unity
+    path: Assets/Scenes/Level10_Level_9000.unity
     guid: 8d401033764019446bf09a4508677533
   - enabled: 1
-    path: Assets/Scenes/Level09_HurryUp.unity
+    path: Assets/Scenes/Level11_HurryUp.unity
     guid: 983183891bf80544b8a15f45000a97c9
   - enabled: 1
-    path: Assets/Scenes/Level00_Factory.unity
+    path: Assets/Scenes/Level12_Factory.unity
     guid: a76998943b573c5478cb5c22280bcf8b
   - enabled: 1
-    path: Assets/Scenes/Level10_Escort.unity
+    path: Assets/Scenes/Level13_Escort.unity
     guid: 5c2a1b2b71614db4da01cf7d3ecf3279
   - enabled: 1
-    path: Assets/Scenes/Level97_EasyPeasy.unity
+    path: Assets/Scenes/Level14_EasyPeasy.unity
     guid: 2a784f778a08a492d9ea2aff7e6ef791
   - enabled: 1
-    path: Assets/Scenes/Level_00UncannyValley.unity
+    path: Assets/Scenes/Level15_UncannyValley.unity
     guid: 5e68062d041b33f4b96f97b18bb3d58f
   - enabled: 1
-    path: Assets/Scenes/Level98_End.unity
+    path: Assets/Scenes/Level16_End.unity
     guid: 6f8165f962214364bbe2635b31709ad2
   - enabled: 1
     path: Assets/Scenes/Credits.unity
