@@ -58,10 +58,12 @@ public class UIManager : MonoBehaviour
     }
 
     static void QuitButton() {
+         if (Input.GetKeyDown(KeyCode.Escape)) {
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #elif !UNITY_WEBGL
         Application.Quit();
 #endif
+         }
     }
 }
