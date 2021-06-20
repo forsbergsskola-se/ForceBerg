@@ -1,3 +1,4 @@
+using PhysicsObjects.Magnetism;
 using UnityEngine;
 
 namespace Traps
