@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using EventBroker;
 using Events;
@@ -6,10 +7,18 @@ using UnityEngine;
 public class Magnet : MonoBehaviour
 {
     [SerializeField] private int triggerKey;
+    
     public int attraction;
     private List<IMagnetic> attractees = new List<IMagnetic>();
     private PolygonCollider2D attractionFieldCollider;
-    
+    private ParticleSystem particleSystem;
+
+    private void Start()
+    {
+        particleSystem = GetComponentInChildren<ParticleSystem>();
+        particleSystem.Stop();
+    }
+
     private void OnEnable()
     {
         attractionFieldCollider = GetComponentInChildren<PolygonCollider2D>();
@@ -45,6 +54,12 @@ public class Magnet : MonoBehaviour
     private void ToggleMagnetism(EventTriggerPlate eventTriggerPlate)
     {
         if(eventTriggerPlate.triggerKey == this.triggerKey)
+        {
             attractionFieldCollider.enabled = eventTriggerPlate.isActive;
+            if(eventTriggerPlate.isActive)
+                particleSystem.Play();
+            else
+                particleSystem.Stop();                
+        }
     }
 }
