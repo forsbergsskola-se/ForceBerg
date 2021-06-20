@@ -6,8 +6,7 @@ namespace PhysicsObjects
     public class FallingPlatform : MonoBehaviour, IDestructible {
     
         [SerializeField] private PlatformBehaviour PlatformInstability;
-        [SerializeField] private GameObject onDestroyPrefab;
-    
+
         private Rigidbody2D rb;
         private AudioSource fallingPlatformSfx;
     
@@ -48,9 +47,6 @@ namespace PhysicsObjects
         private void AddPhysics(Transform child) {
             child.AddComponent<Rigidbody2D>();
             child.parent = null;
-            var destructible = child.AddComponent<Destructible>();
-            destructible.destroyedPrefab = onDestroyPrefab;
-            destructible.destroyDelay = 3f;
         }
 
         [ContextMenu("GenerateCompositeCollider")]
