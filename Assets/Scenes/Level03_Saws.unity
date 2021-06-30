@@ -1183,7 +1183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303474, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.69
+      value: -8.81
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303475, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Size.x
@@ -1205,7 +1205,14 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Inversing gravity
 
-        consumes your energy'
+        consumes your energy
+
+        shown as bar
+        above the can'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
+      propertyPath: m_Color.rgba
+      value: 4278190080
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}

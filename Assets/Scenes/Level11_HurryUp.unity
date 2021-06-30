@@ -68939,7 +68939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Text
-      value: F - Inflate
+      value: F to inflate
       objectReference: {fileID: 0}
     - target: {fileID: 7523406450770303476, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
       propertyPath: m_Color.rgba

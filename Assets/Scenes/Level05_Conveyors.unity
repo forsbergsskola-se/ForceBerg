@@ -190,7 +190,7 @@ PrefabInstance:
       propertyPath: m_Text
       value: 'Conveyors
 
-        are fun!'
+        can be fun!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c235fbfb0dc5ea4478c653b3e72732c4, type: 3}
